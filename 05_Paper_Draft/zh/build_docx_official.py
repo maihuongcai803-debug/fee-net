@@ -113,19 +113,36 @@ def font(run, size, bold=False, italic=False, latin=TNR, east=SONG):
     rF.set(qn("w:eastAsia"), east)
 
 
+CIT = re.compile(r"\[\d+(?:\s*[,，\-–]\s*\d+)*\]")
+
+
+def _plain(p, text, size, bold=False, italic=False, east=SONG, latin=TNR):
+    """写普通文本；其中 [n] 形式的引用标为上标（GB/T 7714 右上角编号）。"""
+    pos = 0
+    for m in CIT.finditer(text):
+        if m.start() > pos:
+            font(p.add_run(text[pos:m.start()]), size, bold, italic, latin, east)
+        r = p.add_run(m.group(0))
+        font(r, size, bold, italic, latin, east)
+        r.font.superscript = True
+        pos = m.end()
+    if pos < len(text):
+        font(p.add_run(text[pos:]), size, bold, italic, latin, east)
+
+
 def add_inline(p, text, size, bold=False, italic=False, east=SONG, latin=TNR):
     text = resolve(text)
     pos = 0
     for m in EQ.finditer(text):
         if m.start() > pos:
-            font(p.add_run(text[pos:m.start()]), size, bold, italic, latin, east)
+            _plain(p, text[pos:m.start()], size, bold, italic, east, latin)
         r = p.add_run(m.group(1) if m.group(1) is not None else (m.group(2) or ""))
         font(r, size, bold, italic, latin, east)
         r.font.subscript = m.group(1) is not None
         r.font.superscript = m.group(1) is None
         pos = m.end()
     if pos < len(text):
-        font(p.add_run(text[pos:]), size, bold, italic, latin, east)
+        _plain(p, text[pos:], size, bold, italic, east, latin)
 
 
 def para(doc, text="", *, size=10.5, bold=False, italic=False, align="justify",
@@ -168,7 +185,7 @@ def _math_runs(p, s, size):
         font(p.add_run(m.group(0)), size, italic=True)
         pos = m.end()
     if pos < len(s):
-        font(p.add_run(s[pos:]), size, italic=False)
+        _plain(p, s[pos:], size)
 
 
 def add_math(p, text, size):
@@ -427,23 +444,7 @@ for line in M.AFFIL_EN:
     para(doc, line, size=9, align="center", indent=False, after=0, latin=TNR)
 para(doc, f"Abstract: {M.ABSTRACT_EN}", size=9, indent=False, before=4, after=2, left=0.7, latin=TNR)
 para(doc, f"Key Words: {M.KEYWORDS_EN}", size=9, indent=False, after=2, left=0.7, latin=TNR)
-para(doc, f"Code and data: {REPO_URL}", size=8, indent=False, after=8, left=0.7, latin=TNR)
-
-# ---- 首页底部脚注区：细分隔线 + 基金项目 / 作者简介 ----
-_rule = doc.add_paragraph()
-_rule.paragraph_format.space_before = Pt(0)
-_rule.paragraph_format.space_after = Pt(2)
-_pPr = _rule._p.get_or_add_pPr()
-_bdr = OxmlElement("w:pBdr")
-_bot = OxmlElement("w:bottom")
-_bot.set(qn("w:val"), "single")
-_bot.set(qn("w:sz"), "4")
-_bot.set(qn("w:space"), "1")
-_bot.set(qn("w:color"), "000000")
-_bdr.append(_bot)
-_pPr.append(_bdr)
-para(doc, M.FUND, size=7.5, indent=False, after=0, left=0.0)
-para(doc, M.BIO, size=7.5, indent=False, after=0, left=0.0)
+para(doc, f"Code and data: {REPO_URL}", size=8, indent=False, after=10, left=0.7, latin=TNR)
 
 # ---------------- §1 body (two columns) ----------------
 body = doc.add_section(WD_SECTION.CONTINUOUS)

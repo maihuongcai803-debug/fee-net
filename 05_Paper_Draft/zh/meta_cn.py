@@ -8,11 +8,9 @@ TITLE_EN = ("FEE-Net: An Audited Frequency-Guided Edge-Aware Network for Colonos
             "Polyp Segmentation — Component-Level Negative Results and a Conformally "
             "Certified Triage Cascade")
 
-AUTHORS_EN = "Medical AI Research Team"
+AUTHORS_EN = "Wenzhe Han"
 
-AFFIL_EN = ["(Author Affiliation, Department)",
-            "(City Postcode, China)",
-            "(Corresponding author e-mail)"]
+AFFIL_EN = ["Beijing Institute of Technology"]
 
 ABSTRACT_EN = (
     "Colorectal cancer is the third most frequently diagnosed malignancy and the "
