@@ -129,7 +129,8 @@ def add_inline(p, text, size, bold=False, italic=False, east=SONG, latin=TNR):
 
 
 def para(doc, text="", *, size=10.5, bold=False, italic=False, align="justify",
-         indent=True, before=0, after=2, east=SONG, latin=TNR, left=0.0, line=1.0):
+         indent=True, before=0, after=2, east=SONG, latin=TNR, left=0.0, line=1.0,
+         math=False):
     p = doc.add_paragraph()
     pf = p.paragraph_format
     pf.alignment = {"justify": WD_ALIGN_PARAGRAPH.JUSTIFY, "center": WD_ALIGN_PARAGRAPH.CENTER,
@@ -151,21 +152,23 @@ GREEK_LOWER = set("αβγδεζηθικλμνξοπρστυφχψω")
 UPRIGHT_SYMBOLS = set("ℝℕℤ⊙‖∈×·−+−=/()[]{},;:<>≤≥≠≈±∝∑∏∫√∞→←↑↓")
 
 
+VAR_TOKEN = re.compile(r"(?<![A-Za-z\-/])([A-Za-z])(?![A-Za-z\-/])|([αβγδεζηθικλμνξοπρστυφχψω])")
+
+
 def _math_runs(p, s, size):
-    """把一段数学文本按"变量斜体 / 算子与数字正体"逐词写入。"""
-    for tok in re.findall(r"[A-Za-z]+|[^A-Za-z]+", s):
-        italic = False
-        if tok.isalpha():
-            if tok.isascii():
-                italic = len(tok) == 1          # 单字母变量斜体；ReLU/GAP/Conv 等算子正体
-            else:
-                italic = all(ch in GREEK_LOWER for ch in tok)  # 希腊小写变量斜体
-        if italic:
-            r = p.add_run(tok)
-            font(r, size, italic=True)
-        else:
-            r = p.add_run(tok)
-            font(r, size, italic=False)
+    """把一段数学文本按"变量斜体 / 算子与数字正体"逐词写入。
+
+    只把"孤立的单个拉丁字母"与希腊小写字母判为变量；`U-Net`、`w/o` 这类
+    连字符/斜杠相邻的字母保持正体，避免把模型名误排成斜体。
+    """
+    pos = 0
+    for m in VAR_TOKEN.finditer(s):
+        if m.start() > pos:
+            font(p.add_run(s[pos:m.start()]), size, italic=False)
+        font(p.add_run(m.group(0)), size, italic=True)
+        pos = m.end()
+    if pos < len(s):
+        font(p.add_run(s[pos:]), size, italic=False)
 
 
 def add_math(p, text, size):
@@ -333,6 +336,34 @@ def official_table(doc, headers, rows, total_cm, widths=None):
     return t
 
 
+def merge_first_col_empties(t):
+    """把首列连续的空单元格向上并入上一行，做垂直合并（vMerge）。
+
+    仅用于表1：'混合队列·校准 / 认证' 各占两行，第二行首列留空。
+    """
+    n = len(t.rows)
+    r = 1
+    while r < n:
+        if t.cell(r, 0).text.strip() == "":
+            start = r
+            while r < n and t.cell(r, 0).text.strip() == "":
+                r += 1
+            top, bot = t.cell(start - 1, 0), t.cell(r - 1, 0)
+            text = top.text
+            merged = top.merge(bot)
+            merged.text = ""
+            p = merged.paragraphs[0]
+            p.paragraph_format.alignment = WD_ALIGN_PARAGRAPH.CENTER
+            p.paragraph_format.space_before = Pt(1)
+            p.paragraph_format.space_after = Pt(1)
+            add_inline(p, text, 9)
+            va = OxmlElement("w:vAlign")
+            va.set(qn("w:val"), "center")
+            merged._tc.get_or_add_tcPr().append(va)
+        else:
+            r += 1
+
+
 def split_caption(text):
     """把"表N 短标题。长说明"拆成 (短标题, 说明)。无句号则整段作标题。"""
     head, sep, rest = text.partition("。")
@@ -388,17 +419,31 @@ para(doc, f"摘　要：{C.ABSTRACT}", size=9, indent=False, before=6, after=2, 
 para(doc, f"关键词：{C.KEYWORDS}", size=9, indent=False, after=2, left=0.7)
 para(doc, (f"中图分类号：{M.CLC}　　文献标识码：{M.DOC_CODE}　　"
            f"文章编号：（由编辑部填写）"), size=9, indent=False, after=2, left=0.7)
-para(doc, M.FUND, size=7.5, indent=False, after=0, left=0.7)
-para(doc, M.BIO, size=7.5, indent=False, after=0, left=0.7)
-para(doc, f"代码与数据（开源仓库）：{REPO_URL}", size=7.5, indent=False, after=11, left=0.7)
+# 基金项目 / 作者简介 / 仓库地址统一挪到首页底部脚注区（见英文块之后）
 
-para(doc, M.TITLE_EN, size=17, align="center", indent=False, before=8, after=5, latin=TNR)
+para(doc, M.TITLE_EN, size=17, align="center", indent=False, before=4, after=4, latin=TNR)
 para(doc, M.AUTHORS_EN, size=11, align="center", indent=False, after=4, latin=TNR)
 for line in M.AFFIL_EN:
     para(doc, line, size=9, align="center", indent=False, after=0, latin=TNR)
-para(doc, f"Abstract: {M.ABSTRACT_EN}", size=9, indent=False, before=5, after=2, left=0.7, latin=TNR)
+para(doc, f"Abstract: {M.ABSTRACT_EN}", size=9, indent=False, before=4, after=2, left=0.7, latin=TNR)
 para(doc, f"Key Words: {M.KEYWORDS_EN}", size=9, indent=False, after=2, left=0.7, latin=TNR)
-para(doc, f"Code and data: {REPO_URL}", size=8, indent=False, after=10, left=0.7, latin=TNR)
+para(doc, f"Code and data: {REPO_URL}", size=8, indent=False, after=8, left=0.7, latin=TNR)
+
+# ---- 首页底部脚注区：细分隔线 + 基金项目 / 作者简介 ----
+_rule = doc.add_paragraph()
+_rule.paragraph_format.space_before = Pt(0)
+_rule.paragraph_format.space_after = Pt(2)
+_pPr = _rule._p.get_or_add_pPr()
+_bdr = OxmlElement("w:pBdr")
+_bot = OxmlElement("w:bottom")
+_bot.set(qn("w:val"), "single")
+_bot.set(qn("w:sz"), "4")
+_bot.set(qn("w:space"), "1")
+_bot.set(qn("w:color"), "000000")
+_bdr.append(_bot)
+_pPr.append(_bdr)
+para(doc, M.FUND, size=7.5, indent=False, after=0, left=0.0)
+para(doc, M.BIO, size=7.5, indent=False, after=0, left=0.0)
 
 # ---------------- §1 body (two columns) ----------------
 body = doc.add_section(WD_SECTION.CONTINUOUS)
@@ -435,7 +480,7 @@ for blk in C.BLOCKS:
         p.paragraph_format.keep_with_next = True
         add_inline(p, f"{m.group(1)}　{m.group(2)}" if m else blk[1], 10.5, bold=True, east=HEI)
     elif kind == "para":
-        para(doc, blk[1])
+        para(doc, blk[1], math=True)
     elif kind == "enum":
         for i, item in enumerate(blk[1], 1):
             p = doc.add_paragraph()
@@ -443,7 +488,7 @@ for blk in C.BLOCKS:
             pf.alignment = WD_ALIGN_PARAGRAPH.JUSTIFY
             pf.first_line_indent = Cm(0.74)
             pf.space_after = Pt(2)
-            add_inline(p, f"（{i}）{item}", 10.5)
+            add_math(p, f"（{i}）{item}", 10.5)
     elif kind == "eq":
         # 公式居中、编号右对齐：用居中 tab + 右对齐 tab，避免长公式折行后编号悬空
         for v, n in zip(blk[2], blk[3]):
@@ -457,9 +502,11 @@ for blk in C.BLOCKS:
             pf.first_line_indent = Cm(0)
             pf.tab_stops.add_tab_stop(Cm(COL_W / 2), WD_TAB_ALIGNMENT.CENTER)
             pf.tab_stops.add_tab_stop(Cm(COL_W), WD_TAB_ALIGNMENT.RIGHT)
-            font(p.add_run("\t"), 10.5)
-            add_math(p, v, 10.5)
-            font(p.add_run(f"\t（{n}）"), 10.5)
+            # 长公式降字号，尽量避免在 8.45 cm 窄栏内折行
+            fs = 10.5 if len(v) <= 56 else (9.5 if len(v) <= 74 else 8.8)
+            font(p.add_run("\t"), fs)
+            add_math(p, v, fs)
+            font(p.add_run(f"\t（{n}）"), fs)
     elif kind == "table":
         tab_i += 1
         wide = tab_i in WIDE_TABLES
@@ -468,7 +515,9 @@ for blk in C.BLOCKS:
         width = USABLE if wide else COL_W
         title, note = split_caption(re.sub(r"^(表\d+)\s*", "", blk[1]))
         caption_title(doc, f"表{tab_i}　{title}", above=True)
-        official_table(doc, blk[2], blk[3], width, blk[4] if len(blk) > 4 else None)
+        tbl = official_table(doc, blk[2], blk[3], width, blk[4] if len(blk) > 4 else None)
+        if tab_i == 1:
+            merge_first_col_empties(tbl)
         caption_note(doc, note)
         if wide:
             switch(2)

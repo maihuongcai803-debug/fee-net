@@ -28,7 +28,7 @@ ABSTRACT_EN = (
     "component attribution reverses the design rationale and locates the real value of the "
     "design: removing the edge-gated module raises Dice to 83.08%, only 1.06 points below "
     "U-Net, while lowering the 95% Hausdorff distance to 31.71 px — the best of the study, "
-    "12.7% below U-Net (36.33 px) and 5.0% below the strongest baseline UNet++ (33.38 px). "
+    "12.7% below U-Net (36.33 px) and 5.0% below the strongest baseline UNet+⁠+ (33.38 px). "
     "The gain is therefore in boundary localisation rather than region overlap, which is the "
     "clinically relevant quantity for resection margins. The three auxiliary losses are each beneficial "
     "(−2.86 without deep supervision, −1.03 without boundary IoU, −0.63 without edge BCE, "
