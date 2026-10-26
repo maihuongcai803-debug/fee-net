@@ -1,11 +1,32 @@
 # FEE-Net: 频域引导边缘感知分割 + 可证安全分流
 
+[![repo](https://img.shields.io/badge/GitHub-maihuongcai803--debug%2Ffee--net-181717?logo=github)](https://github.com/maihuongcai803-debug/fee-net)
+
 医学内镜图像分割研究工程。核心贡献是 **FEE-Net**（离散小波高频分解 + 边缘感知跨尺度门控 +
 Boundary IoU 损失）与 **Laya 三级动态级联分流**（System 1 轻量筛查 → System 2 全量分割），
 并以**有限样本保形风险控制（CRC）**为筛查环节提供可证安全界。
 
 论文数字的权威来源：`checkpoints/v5_final/` + `assets/kaggle_v5_final/`
 （Kaggle v5 终版基准，独立 150 例测试协议）。
+
+> **仓库**：<https://github.com/maihuongcai803-debug/fee-net>
+
+---
+
+## 论文
+
+| 文件 | 说明 |
+|---|---|
+| `05_Paper_Draft/FEE-Net_中文稿_官方模板版.pdf` | 中文定稿（EI 会议官方模板，10 页双栏） |
+| `05_Paper_Draft/Manuscript_FEE_Net_2026.pdf` | 英文稿（IEEEtran） |
+| `05_Paper_Draft/zh/` | 中文稿唯一真源：`content.py` + `meta_cn.py` + `build_docx_official.py` |
+| `05_Paper_Draft/Manuscript_FEE_Net_2026.tex` | 英文稿 LaTeX 源 |
+
+生成中文 Word：
+
+```bash
+python 05_Paper_Draft/zh/build_docx_official.py   # -> FEE-Net_中文稿_官方模板版.docx
+```
 
 ---
 
