@@ -1,0 +1,47 @@
+{
+  "cfg": {
+    "model": "feenet",
+    "epochs": 2,
+    "lr": 0.0003,
+    "seed": 42,
+    "w_bound": 0.1,
+    "w_deep": 0.3,
+    "use_bound": true,
+    "use_edge": true,
+    "use_deep": true,
+    "use_triage": true,
+    "tag": "smoke"
+  },
+  "params_m": 8.539,
+  "best": {
+    "epoch": 2,
+    "loss": 1.3439,
+    "val_dice": 49.16,
+    "val_iou": 37.06,
+    "val_hd95": 79.71
+  },
+  "last": {
+    "epoch": 2,
+    "loss": 1.3439,
+    "val_dice": 49.16,
+    "val_iou": 37.06,
+    "val_hd95": 79.71
+  },
+  "traj": [
+    {
+      "epoch": 1,
+      "loss": 1.6084,
+      "val_dice": 41.39,
+      "val_iou": 29.63,
+      "val_hd95": 94.09
+    },
+    {
+      "epoch": 2,
+      "loss": 1.3439,
+      "val_dice": 49.16,
+      "val_iou": 37.06,
+      "val_hd95": 79.71
+    }
+  ],
+  "minutes": 0.8
+}

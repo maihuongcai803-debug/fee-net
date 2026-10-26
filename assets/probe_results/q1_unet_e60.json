@@ -1,0 +1,453 @@
+{
+  "cfg": {
+    "model": "unet",
+    "epochs": 60,
+    "lr": 0.0003,
+    "seed": 42,
+    "w_bound": 0.1,
+    "w_deep": 0.3,
+    "use_bound": true,
+    "use_edge": true,
+    "use_deep": true,
+    "use_triage": true,
+    "tag": "q1_unet_e60"
+  },
+  "params_m": 7.763,
+  "best": {
+    "epoch": 47,
+    "loss": 0.1327,
+    "val_dice": 77.92,
+    "val_iou": 69.64,
+    "val_hd95": 50.11
+  },
+  "last": {
+    "epoch": 60,
+    "loss": 0.1171,
+    "val_dice": 77.28,
+    "val_iou": 68.54,
+    "val_hd95": 51.83
+  },
+  "traj": [
+    {
+      "epoch": 1,
+      "loss": 1.3613,
+      "val_dice": 37.61,
+      "val_iou": 25.53,
+      "val_hd95": 108.74
+    },
+    {
+      "epoch": 2,
+      "loss": 1.1829,
+      "val_dice": 48.11,
+      "val_iou": 35.31,
+      "val_hd95": 95.63
+    },
+    {
+      "epoch": 3,
+      "loss": 1.0978,
+      "val_dice": 47.8,
+      "val_iou": 36.04,
+      "val_hd95": 76.52
+    },
+    {
+      "epoch": 4,
+      "loss": 1.0211,
+      "val_dice": 54.81,
+      "val_iou": 41.83,
+      "val_hd95": 83.42
+    },
+    {
+      "epoch": 5,
+      "loss": 0.9537,
+      "val_dice": 56.01,
+      "val_iou": 44.28,
+      "val_hd95": 63.11
+    },
+    {
+      "epoch": 6,
+      "loss": 0.9124,
+      "val_dice": 57.46,
+      "val_iou": 45.75,
+      "val_hd95": 65.08
+    },
+    {
+      "epoch": 7,
+      "loss": 0.8448,
+      "val_dice": 58.88,
+      "val_iou": 47.09,
+      "val_hd95": 64.89
+    },
+    {
+      "epoch": 8,
+      "loss": 0.7961,
+      "val_dice": 56.95,
+      "val_iou": 43.95,
+      "val_hd95": 88.2
+    },
+    {
+      "epoch": 9,
+      "loss": 0.7732,
+      "val_dice": 63.27,
+      "val_iou": 51.06,
+      "val_hd95": 67.47
+    },
+    {
+      "epoch": 10,
+      "loss": 0.709,
+      "val_dice": 62.79,
+      "val_iou": 51.75,
+      "val_hd95": 66.11
+    },
+    {
+      "epoch": 11,
+      "loss": 0.6782,
+      "val_dice": 66.62,
+      "val_iou": 55.59,
+      "val_hd95": 59.13
+    },
+    {
+      "epoch": 12,
+      "loss": 0.6309,
+      "val_dice": 62.37,
+      "val_iou": 52.53,
+      "val_hd95": 52.78
+    },
+    {
+      "epoch": 13,
+      "loss": 0.5948,
+      "val_dice": 67.9,
+      "val_iou": 56.56,
+      "val_hd95": 65.37
+    },
+    {
+      "epoch": 14,
+      "loss": 0.5588,
+      "val_dice": 65.9,
+      "val_iou": 55.53,
+      "val_hd95": 58.84
+    },
+    {
+      "epoch": 15,
+      "loss": 0.5291,
+      "val_dice": 67.17,
+      "val_iou": 55.55,
+      "val_hd95": 72.92
+    },
+    {
+      "epoch": 16,
+      "loss": 0.5179,
+      "val_dice": 71.6,
+      "val_iou": 61.46,
+      "val_hd95": 56.27
+    },
+    {
+      "epoch": 17,
+      "loss": 0.4908,
+      "val_dice": 71.21,
+      "val_iou": 61.74,
+      "val_hd95": 51.46
+    },
+    {
+      "epoch": 18,
+      "loss": 0.4543,
+      "val_dice": 68.7,
+      "val_iou": 57.36,
+      "val_hd95": 68.96
+    },
+    {
+      "epoch": 19,
+      "loss": 0.4321,
+      "val_dice": 69.68,
+      "val_iou": 59.01,
+      "val_hd95": 66.58
+    },
+    {
+      "epoch": 20,
+      "loss": 0.4031,
+      "val_dice": 73.05,
+      "val_iou": 62.6,
+      "val_hd95": 63.16
+    },
+    {
+      "epoch": 21,
+      "loss": 0.3957,
+      "val_dice": 71.49,
+      "val_iou": 61.51,
+      "val_hd95": 59.23
+    },
+    {
+      "epoch": 22,
+      "loss": 0.3826,
+      "val_dice": 70.0,
+      "val_iou": 59.22,
+      "val_hd95": 62.89
+    },
+    {
+      "epoch": 23,
+      "loss": 0.3502,
+      "val_dice": 73.3,
+      "val_iou": 64.05,
+      "val_hd95": 51.66
+    },
+    {
+      "epoch": 24,
+      "loss": 0.3469,
+      "val_dice": 73.69,
+      "val_iou": 64.28,
+      "val_hd95": 51.79
+    },
+    {
+      "epoch": 25,
+      "loss": 0.3278,
+      "val_dice": 73.54,
+      "val_iou": 63.96,
+      "val_hd95": 56.82
+    },
+    {
+      "epoch": 26,
+      "loss": 0.3116,
+      "val_dice": 71.53,
+      "val_iou": 60.93,
+      "val_hd95": 62.94
+    },
+    {
+      "epoch": 27,
+      "loss": 0.3096,
+      "val_dice": 75.02,
+      "val_iou": 65.9,
+      "val_hd95": 50.42
+    },
+    {
+      "epoch": 28,
+      "loss": 0.273,
+      "val_dice": 74.76,
+      "val_iou": 64.81,
+      "val_hd95": 57.22
+    },
+    {
+      "epoch": 29,
+      "loss": 0.264,
+      "val_dice": 76.33,
+      "val_iou": 67.28,
+      "val_hd95": 49.93
+    },
+    {
+      "epoch": 30,
+      "loss": 0.2427,
+      "val_dice": 70.84,
+      "val_iou": 60.53,
+      "val_hd95": 61.57
+    },
+    {
+      "epoch": 31,
+      "loss": 0.2559,
+      "val_dice": 74.56,
+      "val_iou": 64.74,
+      "val_hd95": 54.39
+    },
+    {
+      "epoch": 32,
+      "loss": 0.2306,
+      "val_dice": 76.46,
+      "val_iou": 67.41,
+      "val_hd95": 53.55
+    },
+    {
+      "epoch": 33,
+      "loss": 0.2095,
+      "val_dice": 75.75,
+      "val_iou": 66.6,
+      "val_hd95": 53.3
+    },
+    {
+      "epoch": 34,
+      "loss": 0.2017,
+      "val_dice": 77.15,
+      "val_iou": 68.56,
+      "val_hd95": 46.88
+    },
+    {
+      "epoch": 35,
+      "loss": 0.1977,
+      "val_dice": 74.89,
+      "val_iou": 66.09,
+      "val_hd95": 45.63
+    },
+    {
+      "epoch": 36,
+      "loss": 0.1838,
+      "val_dice": 75.9,
+      "val_iou": 67.03,
+      "val_hd95": 53.58
+    },
+    {
+      "epoch": 37,
+      "loss": 0.1808,
+      "val_dice": 77.02,
+      "val_iou": 68.18,
+      "val_hd95": 50.28
+    },
+    {
+      "epoch": 38,
+      "loss": 0.179,
+      "val_dice": 76.22,
+      "val_iou": 67.77,
+      "val_hd95": 51.06
+    },
+    {
+      "epoch": 39,
+      "loss": 0.1728,
+      "val_dice": 77.09,
+      "val_iou": 68.33,
+      "val_hd95": 49.06
+    },
+    {
+      "epoch": 40,
+      "loss": 0.1593,
+      "val_dice": 76.94,
+      "val_iou": 68.24,
+      "val_hd95": 53.18
+    },
+    {
+      "epoch": 41,
+      "loss": 0.161,
+      "val_dice": 76.85,
+      "val_iou": 68.59,
+      "val_hd95": 48.87
+    },
+    {
+      "epoch": 42,
+      "loss": 0.1535,
+      "val_dice": 76.75,
+      "val_iou": 68.54,
+      "val_hd95": 51.05
+    },
+    {
+      "epoch": 43,
+      "loss": 0.1423,
+      "val_dice": 77.73,
+      "val_iou": 69.16,
+      "val_hd95": 49.88
+    },
+    {
+      "epoch": 44,
+      "loss": 0.1399,
+      "val_dice": 77.6,
+      "val_iou": 69.15,
+      "val_hd95": 51.5
+    },
+    {
+      "epoch": 45,
+      "loss": 0.1382,
+      "val_dice": 77.87,
+      "val_iou": 69.49,
+      "val_hd95": 50.61
+    },
+    {
+      "epoch": 46,
+      "loss": 0.1404,
+      "val_dice": 77.23,
+      "val_iou": 68.49,
+      "val_hd95": 54.47
+    },
+    {
+      "epoch": 47,
+      "loss": 0.1327,
+      "val_dice": 77.92,
+      "val_iou": 69.64,
+      "val_hd95": 50.11
+    },
+    {
+      "epoch": 48,
+      "loss": 0.1306,
+      "val_dice": 77.77,
+      "val_iou": 69.42,
+      "val_hd95": 49.72
+    },
+    {
+      "epoch": 49,
+      "loss": 0.127,
+      "val_dice": 77.27,
+      "val_iou": 68.82,
+      "val_hd95": 50.61
+    },
+    {
+      "epoch": 50,
+      "loss": 0.1269,
+      "val_dice": 77.71,
+      "val_iou": 69.2,
+      "val_hd95": 51.39
+    },
+    {
+      "epoch": 51,
+      "loss": 0.1217,
+      "val_dice": 77.09,
+      "val_iou": 68.34,
+      "val_hd95": 52.03
+    },
+    {
+      "epoch": 52,
+      "loss": 0.1222,
+      "val_dice": 77.46,
+      "val_iou": 68.91,
+      "val_hd95": 51.39
+    },
+    {
+      "epoch": 53,
+      "loss": 0.1242,
+      "val_dice": 77.62,
+      "val_iou": 69.25,
+      "val_hd95": 50.34
+    },
+    {
+      "epoch": 54,
+      "loss": 0.1192,
+      "val_dice": 77.38,
+      "val_iou": 68.73,
+      "val_hd95": 51.1
+    },
+    {
+      "epoch": 55,
+      "loss": 0.1187,
+      "val_dice": 77.5,
+      "val_iou": 68.82,
+      "val_hd95": 52.34
+    },
+    {
+      "epoch": 56,
+      "loss": 0.1226,
+      "val_dice": 77.41,
+      "val_iou": 68.86,
+      "val_hd95": 50.86
+    },
+    {
+      "epoch": 57,
+      "loss": 0.1182,
+      "val_dice": 77.3,
+      "val_iou": 68.62,
+      "val_hd95": 51.17
+    },
+    {
+      "epoch": 58,
+      "loss": 0.1192,
+      "val_dice": 77.43,
+      "val_iou": 68.74,
+      "val_hd95": 51.76
+    },
+    {
+      "epoch": 59,
+      "loss": 0.1176,
+      "val_dice": 77.32,
+      "val_iou": 68.65,
+      "val_hd95": 51.54
+    },
+    {
+      "epoch": 60,
+      "loss": 0.1171,
+      "val_dice": 77.28,
+      "val_iou": 68.54,
+      "val_hd95": 51.83
+    }
+  ],
+  "minutes": 6.9
+}

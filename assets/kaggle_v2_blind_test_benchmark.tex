@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Clinical Screening Benchmark on Kaggle Dual Tesla T4 across 100\% Blind Held-Out Test Set (100 Lesions + 100 Normal Mucosa). Models are trained under identical 40-epoch budget on the strict 3-way split with zero data leakage.}
+\label{tab:kaggle_dual_gpu_benchmark}
+\resizebox{\textwidth}{!}{
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Architecture / Paradigm} & \textbf{Params (M)} & \textbf{Throughput (FPS)} $\uparrow$ & \textbf{Lesion Dice (\%)} $\uparrow$ & \textbf{Lesion IoU (\%)} $\uparrow$ & \textbf{HD95} $\downarrow$ & \textbf{Bypass Rate (\%)} $\uparrow$ & \textbf{Sensitivity (Wilson 95\% CI)} $\uparrow$ & \textbf{Speedup} \\
+\midrule
+U-Net (MICCAI 2015) & 7.76 & 77.8 & $67.71 \pm 26.3$ & 56.36 & 72.32 & 0.0\% & 100.0\% [96.3\%, 100.0\%] & 1.00$\times$ \\
+Attention U-Net (MIDL 2018) & 7.85 & 75.1 & $66.40 \pm 27.7$ & 55.29 & 73.90 & 0.0\% & 100.0\% [96.3\%, 100.0\%] & 0.97$\times$ \\
+UNet++ (IEEE TMI 2020) & 9.16 & 43.8 & $\mathbf{69.04 \pm 26.0}$ & $\mathbf{57.81}$ & $\mathbf{77.27}$ & 0.0\% & 100.0\% [96.3\%, 100.0\%] & 0.56$\times$ \\
+\midrule
+Monolithic FEE-Net (S2 Full) & 8.52 & 52.1 & $63.12 \pm 27.9$ & 51.66 & 83.70 & 0.0\% & 100.0\% [96.3\%, 100.0\%] & 1.00$\times$ (ref) \\
+\textbf{FEENet-EE (Proposed)} & 8.52 & \textbf{70.9} & $63.12 \pm 27.9$ & 51.66 & 83.70 & \textbf{100.0\%} & \textbf{100.0\% [96.3\%, 100.0\%]} & \textbf{1.36$\times$} \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}

@@ -1,0 +1,587 @@
+# Citation evidence (verbatim snippets, page-numbered)
+# Generated from papers/references/*; every claim in the manuscript must map here.
+
+
+====================================================================================================
+## 2026_Review_PolypDL.pdf
+
+[p.1] (colorectal cancer)
+  and Sudha M. * School of Computer Science Engineering and Information Systems, Vellore Institute of Technology, Vellore, India Colorectal polyps are key determinants of colorectal cancer. Their accurate detection during colonoscopy has been a technically challenging work due to differences in shape size imaging conditions and texture. Emerging advances in Artificial Intelligence pred
+
+[p.1] (colorectal cancer)
+  ORDS colorectal polyp analysis, computer aided diagnosis, deep learning, medical image analysis, polyp classification, polyp detection, polyp segmentation 1 Introduction Colorectal Cancer (CRC), better known as colon or bowel cancer, ranks the third most frequent type of cancer worldwide. It is emerging as the second major reason for cancer deaths (World Health Organization, 2023). Fr
+
+[p.1] (colorectal cancer)
+  provided the opportunity for suc­ cessful cancer prevention. Early identification and complete excision of polyps can prevent a vast majority of patients from developing colorectal cancer (Haggar and Boushey, 2009). Conversely, incomplete polyp resection or missed lesions may progressively grow in size,
+
+[p.1] (\b\d[\d,\.]*\s*(million|new cases|deaths))
+  emerging nations (International Agency for Research on Cancer, n.d.). It has also been foreseen that the perceived global incidence of CRC will dramati­ cally reach over 3.2 million cases every year by 2040 (Xi and Xu, 2021). A vast majority of patients develop CRC over a period of years due to the adenocarcinoma sequence. The benign polyps within the colon or rectum progress in
+
+[p.5] (Kvasir-SEG)
+  al techniques, such as dyed and lifted polyps or dyed resection margins. Images differ in reso­ lution between 720 × 576 and 1920 × 1,072 (Pogorelov et al., 2017). 3.1.2 Kvasir-SEG Kvasir-SEG is an open-access dataset, intended for pixel-wise polyp segmentation in gastrointestinal endoscopy. It comprises 1,000 polyp images which were sourced from the Kvasir dataset. A ground-tr
+
+[p.5] (Kvasir-SEG)
+  es, such as dyed and lifted polyps or dyed resection margins. Images differ in reso­ lution between 720 × 576 and 1920 × 1,072 (Pogorelov et al., 2017). 3.1.2 Kvasir-SEG Kvasir-SEG is an open-access dataset, intended for pixel-wise polyp segmentation in gastrointestinal endoscopy. It comprises 1,000 polyp images which were sourced from the Kvasir dataset. A ground-truth segment
+
+[p.5] (Kvasir-SEG)
+  are manually created and verified by experienced gastroenterologists using the Labelbox annotation tool; bounding box coordinates are also specified in a JSON file. With Kvasir-SEG adding pixel-level segmentation to a dataset previ­ ously containing only frame-level labels, it allows robust bench­ marking and development of advanced algorithms for the segmentation, detection, a
+
+[p.2] (real[- ]time)
+  tual modelling, integrating features at multiple scales, and develop­ ing end-to-end multi-task learning frameworks. These advancements enable a single system to support real-time detection, accurate seg­ mentation, and lesion characterization (Shin et al., 2018; Wang et al., 2020). Despite the progress that has been made, the current state of research is quite fragmented. Det
+
+[p.2] (real[- ]time)
+  sed contrastive learning, is conducted to assess their impact on robustness, generalization, and clinical relevance. The paper further discusses the need for integrated, real-time, uncertainty-aware Holistic Colonoscopy Intelligence systems that can deliver stable, interpretable, and clinically relevant assistance during the entire colonoscopy procedure. This review aims to pr
+
+[p.3] (real[- ]time)
+  el? 5 How successful are unified or multi-task models in compari­ son with task-specific models? 6 How key challenges like small polyp detection, temporal con­ sistency, real-time performance and uncertainty estimation restrict the implementation in clinical practice? 7 What are the major issues, limitations, and research gaps in the existing literature with respect to the qua
+
+[p.2] (generaliz)
+  luding hybrid CNN- Transformer models, GAN-based synthetic data generation, and self- supervised contrastive learning, is conducted to assess their impact on robustness, generalization, and clinical relevance. The paper further discusses the need for integrated, real-time, uncertainty-aware Holistic Colonoscopy Intelligence systems that can deliver stable, interpretable, and c
+
+[p.3] (generaliz)
+  .3389/frai.2026.1786679 Frontiers in Artificial Intelligence 03 frontiersin.org 3 Which preprocessing and data augmentation methods are used for improving robustness and generalizability and for making a model ready for clinical use? 4 What are the major evaluation criteria used in practice, and how do these indicate the practical applications of the model? 5 How successful ar
+
+[p.3] (generaliz)
+  the implementation in clinical practice? 7 What are the major issues, limitations, and research gaps in the existing literature with respect to the quality of datasets, generalization performance, and computational cost.? 8 How is explainability and interpretability incorporated into DL models for easier clinical acceptance? 9 What are the upcoming potential research areas th
+
+[p.1] (clinical (deployment|translation))
+  king. Finally existing gaps and future research paths have been discussed with an objective to fill the performance-translation gaps between experimental performance and clinical deployment. This review gives a structured reference for AI-based colorectal polyp analysis. KEYWORDS colorectal polyp analysis, computer aided diagnosis, deep learning, medical image analysis, polyp classifica
+
+[p.3] (clinical (deployment|translation))
+  ity and interpretability incorporated into DL models for easier clinical acceptance? 9 What are the upcoming potential research areas that are most crucial for improving clinical deployment and real-world acquisition? Figure 2 gives a overview of deep learning framework for medical imaging. 2 Methodology 2.1 Eligibility criteria The criteria of eligibility have been formalized to mainta
+
+[p.18] (clinical (deployment|translation))
+  dropped to 81.2%, highlighting a significant 15.1% generalization gap. This cross-dataset variability in endoscopic imaging, remains a significant barrier to reli­ able clinical deployment. Study (Babuc et al., 2025) incorporates a unique “Rule-based layer” to include medical expertise. The model achieved an F1-score of 86.1% and sensitivity of 93.2%. While its F1-score is lower than t
+
+
+====================================================================================================
+## 2020_KvasirSEG.pdf
+
+[p.4] (1,?000)
+  detection and classiﬁcation. 3.1 The original Kvasir dataset The original Kvasir dataset [16] comprises 8,000 GI tract images from 8 classes where each class consists of 1000 images. We replaced the 13 images from the polyp class with new images to improve the quality of the dataset. These images were collected and veriﬁed by experienced gastroenterologists from Vestre Vi
+
+[p.6] (1,?000)
+  endoscope position marking probe from the ScopeGuide (Olympus). The Kvasir-SEG dataset is made up of two folders: one for images and one for masks. Each folder contains 1000 images. The bounding boxes for the cor- responding images are stored in a JSON ﬁle. Therefore, the kvasir-SEG dataset has image folder, masks folder and JSON ﬁle. The image and its corresponding mask
+
+[p.6] (1,?000)
+  the ROI in image frames, i.e., the polyp regions for our case. A team consist- ing of an engineer and a medical doctor manually outlined the margins of all polyps in all 1000 images. The annotations were then reviewed by an experienced gastroenterologist. Figure 1 shows example frames from the kvasir dataset where we have ad- ditionally marked the polyp tissue with green
+
+[p.1] (Kvasir-SEG (is|dataset|contains))
+  s to contribute in the ﬁeld of polyp segmentation and automatic analysis of colonoscopy images. Keywords: Medical images · Polyp segmentation · Semantic segmenta- tion · Kvasir-SEG dataset · Fuzzy c-mean clustering · ResUNet 1 Introduction Colorectal cancer is the second most common cancer type among women and third most common among men [25]. Polyps are precursors to colorectal cancer
+
+[p.3] (Kvasir-SEG (is|dataset|contains))
+  Kvasir-SEG: A Segmented Polyp Dataset 3 datasets, open-access datasets for comparable evaluations are missing in this ﬁeld. We therefore provide the Kvasir-SEG dataset and propose a baseline model for evaluation. The main contribution of this paper are as follows: 1. We extend the Kvasir dataset [16] with polyp images along with their corre- sponding segmentation m
+
+[p.3] (Kvasir-SEG (is|dataset|contains))
+  are generated from manual annotations ver- iﬁed by an experienced gastroenterologist. The bounding boxes are the set of coordinates that encloses the polyp regions. The Kvasir-SEG dataset is made publicly available and open access. 2. In this article, we include a ﬁrst attempt to use the Kvasir-SEG dataset for pixel-wise semantic segmentation based analysis. For the experiment, we hav
+
+
+====================================================================================================
+## 2026_npjDM_PrysmNet_TEMPLATE.pdf
+
+[p.2] (cross-domain)
+  . In this paper, we address these gaps by proposing PrysmNet (a Polyp Reﬁning sYstem with Salience and Multi-modal guidance), a comprehen- sive solution for reproducible cross-domain polyp segmentation. Our approach combines architectural innovation with advanced training stra- tegies to improve generalization, especially for small and boundary- challenged polyps. Our contributio
+
+[p.2] (cross-domain)
+  ross-dataset results (e.g., testing a model trained on Kvasir-SEG/CVC on the ETIS-LaribPolypDB dataset)8. However, until recently, there was no standardized protocol for cross-domain evaluation, making it difﬁcult to assess true generalizability. As a result, many publications have reported only in-domain metrics, which do not guarantee real-world clinical reliability. Recognizin
+
+[p.1] (boundary)
+  i1,2, Jun Yi1,2, Yu Wu5 & Xiaowei Liu1,2,6,7 Colorectal cancer prevention beneﬁts from accurate and reproducible polyp segmentation, yet cross- domain generalization and boundary precision remain challenging in real-world deployments. We propose Prysm-Net, a ViT-based framework designed to address these issues through architectural innovation and advanced training guidance. O
+
+[p.1] (boundary)
+  sues through architectural innovation and advanced training guidance. Our model is augmented with a biologically inspired salience module (BSM) that dynamically sharpens boundary-relevant features. To further enhance robustness without increasing inference costs, we introduce two training-only strategies: (i) foundation-model distillation from SAM, which transfers knowledge a
+
+[p.1] (Dice)
+  ep-learning-based polyp segmentation methods have achieved remarkable in-domain performance on standard datasets. In controlled evaluations, many models report high mean Dice scores (often 0.85–0.95) on popular benchmarks7,8. Nevertheless, a critical gapremainsbetweensuchin-domainsuccessandreal-worldgeneralization. Most existing approaches are trained and tested on data f
+
+[p.1] (Dice)
+  lead to distribution shifts that can signiﬁcantly degrade model performance9,10. For example, models that approach near human accuracy on seen datasets often plummet to Dice scores around 0.6–0.7 on unseen datasets such as the recent multi-center PolypGen collection2,4. Moreover,certainchallengingpolyp casesremainproblematic:smallpolyps occupying only a tiny fraction of
+
+[p.1] (generaliz)
+  g Wang1,2, Shizhe Li1,2, Jun Yi1,2, Yu Wu5 & Xiaowei Liu1,2,6,7 Colorectal cancer prevention beneﬁts from accurate and reproducible polyp segmentation, yet cross- domain generalization and boundary precision remain challenging in real-world deployments. We propose Prysm-Net, a ViT-based framework designed to address these issues through architectural innovation and advanced tr
+
+[p.1] (generaliz)
+  tensive experiments on standard in-domain benchmarks and challenging cross- domain datasets demonstrate that Prysm-Net achieves superior segmentation accuracy and robust generalization compared to state-of-the-art methods, all while maintaining a lightweight inference process by disabling auxiliary guidance at test time. Colorectal cancer (CRC) is a leading cause of cancer mor
+
+[p.1] (reproducib)
+  hip with Seoul National University Bundang Hospital https://doi.org/10.1038/s41746-026-02345-7 PrysmNet a polyp reﬁning system using salience and multimodal guidance for reproducible cross domain segmentation Check for updates Junbo Xiao1,2, Yi Han1,2, Lei Wang3, Ying Li4, Xiaotong Wang1,2, Shizhe Li1,2, Jun Yi1,2, Yu Wu5 & Xiaowei Liu1,2,6,7 Colorectal cancer prevention beneﬁt
+
+[p.1] (reproducib)
+  bo Xiao1,2, Yi Han1,2, Lei Wang3, Ying Li4, Xiaotong Wang1,2, Shizhe Li1,2, Jun Yi1,2, Yu Wu5 & Xiaowei Liu1,2,6,7 Colorectal cancer prevention beneﬁts from accurate and reproducible polyp segmentation, yet cross- domain generalization and boundary precision remain challenging in real-world deployments. We propose Prysm-Net, a ViT-based framework designed to address these issue
+
+
+====================================================================================================
+## 2025_MEGANetW_WaveletEdge.pdf
+
+[p.1] (wavelet)
+  MEGANet-W: A Wavelet-Driven Edge-Guided Attention Framework for Weak Boundary Polyp Detection Tan Zhe Yee School of Artificial Intelligence and Robotics (SAIR) Xiamen University Malaysia, Sepang, Malaysia ait2209953@xmu.
+
+[p.1] (wavelet)
+  ccuracy. Existing deep models either blur fine edge details or rely on handcrafted filters that perform poorly under variable imaging conditions. We propose MEGANet-W, a Wavelet Driven Edge Guided Attention Network that injects directional, parameter free Haar wavelet edge maps into each decoder stage to recalibrate semantic features. The key novelties of MEGANet-W include a
+
+[p.1] (weak boundary)
+  MEGANet-W: A Wavelet-Driven Edge-Guided Attention Framework for Weak Boundary Polyp Detection Tan Zhe Yee School of Artificial Intelligence and Robotics (SAIR) Xiamen University Malaysia, Sepang, Malaysia ait2209953@xmu.edu.my Ashwaq Qasem* School of Artificial Intelligence an
+
+[p.6] (weak boundary)
+  egmentation,” Bioengineering, vol. 12, 3 2025. 1 [5] N.-T. Bui, D.-H. Hoang, Q.-T. Nguyen, M.-T. Tran, and N. Le, “Meganet: Multi-scale edge-guided attention network for weak boundary polyp segmentation,” 11 2023. [Online]. Available: http: //arxiv.org/abs/2309.03329 1, 2, 3, 4, 5, 6 [6] Z. Wu, F. Lv, C. Chen, A. Hao, and S. Li, “Colorectal polyp segmentation in the deep learning
+
+[p.1] (Dice)
+  se wavelet cues with boundary and input branches. On five public polyp datasets, MEGANet-W consistently outperforms existing methods, improv- ing mIoU by up to 2.3% and mDice by 1.2%, while introducing no additional learnable parameters. This approach improves reliability in difficult cases and offers a robust solution for medical image segmentation tasks requiring precis
+
+[p.4] (Dice)
+  s pixel-wise accuracy and region overlap. Concretely, each side- output Dk is compared with its matched ground-truth mask gk via the sum of binary cross-entropy and soft Dice: LBCE+Dice  Pk, gk  = −1 N N X i=1 h gk,i log Pk,i + (1 −gk,i) log  1 −Pk,i i + 1 − 2 PN i=1 Pk,i gk,i PN i=1 Pk,i + PN i=1 gk,i + 1 . (15)
+
+[p.1] (edge)
+  MEGANet-W: A Wavelet-Driven Edge-Guided Attention Framework for Weak Boundary Polyp Detection Tan Zhe Yee School of Artificial Intelligence and Robotics (SAIR) Xiamen University Malaysia, Sepang, Malaysia ait2209953@xmu.edu.my Ashwa
+
+[p.1] (edge)
+  s critical for early detection of colorectal cancer, yet weak and low contrast bound- aries significantly limit automated accuracy. Existing deep models either blur fine edge details or rely on handcrafted filters that perform poorly under variable imaging conditions. We propose MEGANet-W, a Wavelet Driven Edge Guided Attention Network that injects directional, parameter
+
+
+====================================================================================================
+## 2026_WaveletCrossBand.pdf
+
+[p.1] (wavelet)
+  Polyp Segmentation Using Wavelet-Based Cross-Band Integration for Enhanced Boundary Representation Haesung Oh1 Jaesung Lee1∗ 1Department of Artificial Intelligence, Chung-Ang University, Republic of Korea harrydeoh@gmail.com, curseo
+
+[p.1] (wavelet)
+  and ambiguous structures between polyps and surrounding mucosa. To establish a quantitative foundation for this limitation, We analyzed polyp–background contrast in the wavelet domain, revealing that grayscale representations consistently preserve higher boundary contrast than RGB images across all frequency bands. This finding suggests that boundary cues are more distinctl
+
+[p.1] (boundary)
+  Polyp Segmentation Using Wavelet-Based Cross-Band Integration for Enhanced Boundary Representation Haesung Oh1 Jaesung Lee1∗ 1Department of Artificial Intelligence, Chung-Ang University, Republic of Korea harrydeoh@gmail.com, curseor@cau.ac.kr Abstract Accurate polyp segmentation is
+
+[p.1] (boundary)
+  Republic of Korea harrydeoh@gmail.com, curseor@cau.ac.kr Abstract Accurate polyp segmentation is essential for early colorectal cancer detection, yet achieving reliable boundary localization remains challenging due to low mucosal contrast, uneven illumination, and color similarity between polyps and surrounding tissue. Conventional methods relying solely on RGB information o
+
+[p.3] (Dice)
+  Table 1: Quantitative comparison of polyp segmentation methods across four benchmark datasets, evaluated by mean Dice and IoU scores (mean ± standard deviation) averaged over 10 random runs. Methods Kvasir ClinicDB ColonDB ETIS mDice mIoU mDice mIoU mDice mIoU mDice mIoU Ours 0.885 ± 0.021 0.822 ± 0.019 0.926 ± 0.01
+
+[p.3] (Dice)
+  ods across four benchmark datasets, evaluated by mean Dice and IoU scores (mean ± standard deviation) averaged over 10 random runs. Methods Kvasir ClinicDB ColonDB ETIS mDice mIoU mDice mIoU mDice mIoU mDice mIoU Ours 0.885 ± 0.021 0.822 ± 0.019 0.926 ± 0.014 0.862 ± 0.023 0.913 ± 0.021 0.840 ± 0.042 0.922 ± 0.029 0.821 ± 0.029 Polyper 0.867 ± 0.014 0.796 ± 0.020 0.914 ±
+
+[p.1] (cross-band)
+  Polyp Segmentation Using Wavelet-Based Cross-Band Integration for Enhanced Boundary Representation Haesung Oh1 Jaesung Lee1∗ 1Department of Artificial Intelligence, Chung-Ang University, Republic of Korea harrydeoh@gmail.com, curseor@cau.ac.kr Abstr
+
+[p.2] (cross-band)
+  between RGB and grayscale images in the wavelet domain, showing consistently higher contrast for grayscale across all detail sub-bands. Figure 2: Proposed wavelet-based cross-band integration framework that fuses frequency-consistent information from RGB and grayscale features for enhanced boundary representation. these, boundary-aware models such as PraNet [6], CaraNet [10],
+
+
+====================================================================================================
+## 2015_UNet.pdf
+
+[p.1] (sliding[- ]window)
+  c expanding path that enables precise localiza- tion. We show that such a network can be trained end-to-end from very few images and outperforms the prior best method (a sliding-window convolutional network) on the ISBI challenge for segmentation of neu- ronal structures in electron microscopic stacks. Using the same net- work trained on transmitted light microscopy images (phase c
+
+[p.1] (sliding[- ]window)
+  sed to be assigned to each pixel. More- over, thousands of training images are usually beyond reach in biomedical tasks. Hence, Ciresan et al. [1] trained a network in a sliding-window setup to predict the class label of each pixel by providing a local region (patch) around that pixel arXiv:1505.04597v1 [cs.CV] 18 May 2015
+
+[p.2] (very few training)
+  In this paper, we build upon a more elegant architecture, the so-called “fully convolutional network” [9]. We modify and extend this architecture such that it works with very few training images and yields more precise segmentations; see Figure 1. The main idea in [9] is to supplement a usual contracting network by successive layers, where pooling operators are replaced by upsampling
+
+
+====================================================================================================
+## 2018_AttentionUNet.pdf
+
+[p.1] (attention gate)
+  University & Aichi Cancer Center, JP 3Medical Informatics, University of Luebeck, DE, 4HeartFlow, California, USA 5Babylon Health, London, UK Abstract We propose a novel attention gate (AG) model for medical imaging that automat- ically learns to focus on target structures of varying shapes and sizes. Models trained with AGs implicitly learn to suppress irrelevant regions in an inp
+
+[p.1] (attention gate)
+  lar low-level features are repeatedly extracted by all models within the cascade. To address this general problem, we propose a simple and yet effective solution, namely attention gates (AGs). CNN models with AGs can be trained from scratch in a standard way similar to the training of a FCN model, and AGs automatically learn to focus on target 1st Conference on Medical Imaging with
+
+[p.1] (irrelevant)
+  AG) model for medical imaging that automat- ically learns to focus on target structures of varying shapes and sizes. Models trained with AGs implicitly learn to suppress irrelevant regions in an input image while highlighting salient features useful for a speciﬁc task. This enables us to eliminate the necessity of using explicit external tissue/organ localisation modules of cas
+
+[p.2] (irrelevant)
+  the case of multi-model frameworks. In return, the proposed AGs improve model sensitivity and accuracy for dense label predictions by suppressing feature activations in irrelevant regions. In this way, the necessity of using an external organ localisation model can be eliminated while maintaining the high prediction accuracy. Similar attention mechanisms have been proposed for
+
+[p.1] (suppress)
+  on gate (AG) model for medical imaging that automat- ically learns to focus on target structures of varying shapes and sizes. Models trained with AGs implicitly learn to suppress irrelevant regions in an input image while highlighting salient features useful for a speciﬁc task. This enables us to eliminate the necessity of using explicit external tissue/organ localisation mod
+
+[p.2] (suppress)
+  ge number of model parameters as in the case of multi-model frameworks. In return, the proposed AGs improve model sensitivity and accuracy for dense label predictions by suppressing feature activations in irrelevant regions. In this way, the necessity of using an external organ localisation model can be eliminated while maintaining the high prediction accuracy. Similar attent
+
+
+====================================================================================================
+## 2018_UNetPP.pdf
+
+[p.1] (semantic gap)
+  der network where the encoder and de- coder sub-networks are connected through a series of nested, dense skip pathways. The re-designed skip pathways aim at reducing the semantic gap between the feature maps of the encoder and decoder sub-networks. We argue that the optimizer would deal with an easier learning task when the feature maps from the decoder and encoder networks are s
+
+[p.3] (semantic gap)
+  . 1: (a) UNet++ consists of an encoder and decoder that are connected through a series of nested dense convolutional blocks. The main idea behind UNet++ is to bridge the semantic gap between the feature maps of the encoder and decoder prior to fusion. For example, the semantic gap between (X0,0,X1,3) is bridged using a dense convolution block with three convolution layers. In the
+
+[p.1] (nested)
+  UNet++: A Nested U-Net Architecture for Medical Image Segmentation Zongwei Zhou, Md Mahfuzur Rahman Siddiquee, Nima Tajbakhsh, and Jianming Liang Arizona State University {zongweiz,mrahmans,ntajbakh,jianming.liang}@a
+
+[p.1] (nested)
+  segmentation. Our architecture is essentially a deeply-supervised encoder-decoder network where the encoder and de- coder sub-networks are connected through a series of nested, dense skip pathways. The re-designed skip pathways aim at reducing the semantic gap between the feature maps of the encoder and decoder sub-networks. We argue that the optimizer would deal with an e
+
+[p.1] (deep supervision)
+  en- tation in the microscopy images, liver segmentation in abdominal CT scans, and polyp segmentation in colonoscopy videos. Our experiments demonstrate that UNet++ with deep supervision achieves an average IoU gain of 3.9 and 3.4 points over U-Net and wide U-Net, respectively. 1 Introduction The state-of-the-art models for image segmentation are variants of the encoder- decoder arch
+
+[p.3] (deep supervision)
+  e convolution layers. In the graphical abstract, black indicates the original U-Net, green and blue show dense convolution blocks on the skip pathways, and red indicates deep supervision. Red, green, and blue components distinguish UNet++ from U-Net. (b) Detailed analysis of the ﬁrst skip pathway of UNet++. (c) UNet++ can be pruned at inference time, if trained with deep supervision.
+
+
+====================================================================================================
+## 2021_TransUNet.pdf
+
+[p.1] (global context)
+  age segmentation. On one hand, the Transformer encodes tokenized image patches from a con- volution neural network (CNN) feature map as the input sequence for extracting global contexts. On the other hand, the decoder upsamples the encoded features which are then combined with the high-resolution CNN feature maps to enable precise localization. We argue that Transformers can serve
+
+[p.2] (global context)
+  nse convolution operators entirely and solely rely on attention mechanisms instead [14]. Unlike prior CNN-based methods, Transformers are not only power- ful at modeling global contexts but also demonstrate superior transferability for downstream tasks under large-scale pre-training. The success has been widely witnessed in the ﬁeld of machine translation and natural language proce
+
+[p.1] (self-attention)
+  in explicitly modeling long-range dependency. Transformers, de- signed for sequence-to-sequence prediction, have emerged as alternative architectures with innate global self-attention mechanisms, but can re- sult in limited localization abilities due to insuﬃcient low-level details. In this paper, we propose TransUNet, which merits both Transformers and U-Net, as a strong alternat
+
+[p.2] (self-attention)
+  y for target structures that show large inter-patient variation in terms of texture, shape and size. To overcome this lim- itation, existing studies propose to establish self-attention mechanisms based on CNN features [13,15]. On the other hand, Transformers, designed for sequence- to-sequence prediction, have emerged as alternative architectures which employ dispense convolution o
+
+
+====================================================================================================
+## 2024_MedSAM.pdf
+
+[p.1] (1,?570,?263)
+  M, a foundation model designed for bridging this gap by enabling universal medical image segmentation. The model is developed on a large-scale medical image dataset with 1,570,263 image-mask pairs, covering 10 imaging modalities and over 30 cancer types. We conduct a comprehensive evaluation on 86 internal validation tasks and 60 external validation tasks, demon- strating bett
+
+[p.4] (1,?570,?263)
+  g conditions, anatomical structures, and pathological conditions. To address this challenge, we curated a diverse and large-scale medical image segmentation dataset with 1,570,263 medical image-mask pairs, cover- ing 10 imaging modalities, over 30 cancer types, and a multitude of imaging protocols (Fig. 1, Supplementary Table 1-4). This large-scale dataset allows MedSAM to lea
+
+[p.2] (prompt)
+  egmentation have witnessed the emergence of segmentation foundation models, such as Segment Anything Model (SAM) [7] and Segment Every- thing Everywhere with Multi-modal prompts all at once [8], showcasing remarkable versatility and performance across various segmentation tasks. There is a growing demand for universal models in medical image segmentation: models that can be
+
+[p.2] (prompt)
+  models (e.g., SAM [7]) to medical image segmentation remains limited due to the significant differences between natural images and medical images. Essentially, SAM is a promptable seg- mentation method that requires points or bounding boxes to specify the segmentation targets. This resembles conventional interactive segmentation methods [4, 9–11] but SAM has better general
+
+[p.1] (foundation model)
+  ften tailored to specific modalities or disease types, lack gen- eralizability across the diverse spectrum of medical image segmentation tasks. Here we present MedSAM, a foundation model designed for bridging this gap by enabling universal medical image segmentation. The model is developed on a large-scale medical image dataset with 1,570,263 image-mask pairs, covering 10 imaging mod
+
+[p.2] (foundation model)
+  er application of these models in clinical practice. In contrast, recent advances in the field of natural image segmentation have witnessed the emergence of segmentation foundation models, such as Segment Anything Model (SAM) [7] and Segment Every- thing Everywhere with Multi-modal prompts all at once [8], showcasing remarkable versatility and performance across various segmentation
+
+
+====================================================================================================
+## 2024_VMUNet.pdf
+
+[p.1] (linear complexity)
+  researchers. Building on the foundation of classical SSM [17] research, the modern SSMs (e.g., Mamba [18]) not only establish long-distance dependencies but also exhibit linear complexity with respect to input size. Additionally, SSM-based models have received substantial research across many fields, including language understanding [18], [19], general vision [20], [21], etc. Particul
+
+[p.1] (Mamba)
+  JOURNAL OF LATEX CLASS FILES, VOL. 14, NO. 8, AUGUST 2021 1 VM-UNet: Vision Mamba UNet for Medical Image Segmentation Jiacheng Ruan, Jincheng Li, and Suncheng Xiang, Member, IEEE Abstract—In the realm of medical image segmentation, both CNN-based and Transformer-based models have
+
+[p.1] (Mamba)
+  s in long-range modeling capabilities, whereas Transformers are hampered by their quadratic computational complexity. Recently, State Space Models (SSMs), exemplified by Mamba, have emerged as a promising approach. They not only excel in modeling long-range interactions but also maintain a linear computational complexity. In this paper, leveraging state space models, we pr
+
+[p.1] (quadratic)
+  nsformer-based models have been exten- sively explored. However, CNNs exhibit limitations in long-range modeling capabilities, whereas Transformers are hampered by their quadratic computational complexity. Recently, State Space Models (SSMs), exemplified by Mamba, have emerged as a promising approach. They not only excel in modeling long-range interactions but also maintain a
+
+[p.1] (quadratic)
+  ulting in suboptimal segmentation outcomes. Although Transformer- based models demonstrate superior performance for global modeling, the self-attention mechanism demands quadratic complexity in terms of image sizes, leading to a high compu- tational burden [10], [15], [16], particularly for tasks requir- ing dense predictions like medical image segmentation. The current shortc
+
+
+====================================================================================================
+## 2020_PraNet.pdf
+
+[p.1] (reverse attention)
+  PraNet: Parallel Reverse Attention Network for Polyp Segmentation Deng-Ping Fan1, Ge-Peng Ji2, Tao Zhou1, Geng Chen1, Huazhu Fu1 , Jianbing Shen1 , and Ling Shao3,1 1 Inception Institute of Artiﬁcial Intelligence, Abu Dhabi, UAE. 2 Sc
+
+[p.1] (reverse attention)
+  ased on the combined feature, we then generate a global map as the initial guidance area for the fol- lowing components. In addition, we mine the boundary cues using the reverse attention (RA) module, which is able to establish the relation- ship between areas and boundary cues. Thanks to the recurrent cooper- ation mechanism between areas and boundaries, our PraNet is capable of cali
+
+[p.6] (0\.898)
+  .910 0.048 ResUNet-mod† [35] 0.791 n/a n/a n/a n/a n/a ResUNet++† [16] 0.813 0.793 n/a n/a n/a n/a SFA (MICCAI’19) [10] 0.723 0.611 0.670 0.782 0.849 0.075 PraNet (Ours) 0.898 0.840 0.885 0.915 0.948 0.030 CVC-612 U-Net (MICCAI’15) [22] 0.823 0.755 0.811 0.889 0.954 0.019 U-Net++ (TMI’19) [39] 0.794 0.729 0.785 0.873 0.931 0.022 ResUNet-mod† [35] 0.779 n/a n/a n/a n/a n/a
+
+[p.7] (0\.898)
+  33 0.109 PraNet (Ours) 0.628 0.567 0.600 0.794 0.841 0.031 CVC-T U-Net (MICCAI’15) [22] 0.710 0.627 0.684 0.843 0.876 0.022 U-Net++ (TMI’19) [39] 0.707 0.624 0.687 0.839 0.898 0.018 SFA (MICCAI’19) [10] 0.467 0.329 0.341 0.640 0.817 0.065 PraNet (Ours) 0.871 0.797 0.843 0.925 0.972 0.010 Table 3: Training and inference analysis (same platform) on CVC-ClinicDB [2] dataset.
+
+[p.5] (Kvasir)
+  lts. Datasets and Baselines. Experiments are conducted on ﬁve polyp segmenta- tion datasets: ETIS [23], CVC-ClinicDB/CVC-612 [2], CVC-ColonDB [24], En- doScene [25], and Kvasir [15]. The ﬁrst four are standard benchmarks, and the last one is the largest-scale challenging dataset, recently released. We compare our PraNet with four SOTA medical image segmentation methods: U-N
+
+[p.5] (Kvasir)
+  by the released code with default settings. Training Settings and Metrics. Unless otherwise noted, we follow the same training settings as in [16], i.e., the images from Kvasir, and CVC-ClinicDB are randomly split into 80% for training, 10% for validation, and 10% for testing. We employ two metrics (i.e., mean Dice and mean IoU) for quantitative evalua- tion, similar to [16
+
+
+====================================================================================================
+## 2018_SENet.pdf
+
+[p.1] (channel)
+  l building block of convolutional neural networks (CNNs) is the convolution operator, which enables networks to construct informative features by fusing both spatial and channel-wise information within local receptive ﬁelds at each layer. A broad range of prior research has investigated the spatial component of this relationship, seeking to strengthen the representational po
+
+[p.1] (channel)
+  g to strengthen the representational power of a CNN by enhancing the quality of spatial encodings throughout its feature hierarchy. In this work, we focus instead on the channel relationship and propose a novel architectural unit, which we term the “Squeeze-and-Excitation” (SE) block, that adaptively recalibrates channel-wise feature responses by explicitly modelling interde
+
+[p.1] (squeeze)
+  1 Squeeze-and-Excitation Networks Jie Hu[0000−0002−5150−1003] Li Shen[0000−0002−2283−4976] Samuel Albanie[0000−0001−9736−5134] Gang Sun[0000−0001−6913−6799] Enhua Wu[0000−0002−2174−1428] Abstract—The central b
+
+[p.1] (squeeze)
+  spatial encodings throughout its feature hierarchy. In this work, we focus instead on the channel relationship and propose a novel architectural unit, which we term the “Squeeze-and-Excitation” (SE) block, that adaptively recalibrates channel-wise feature responses by explicitly modelling interdependencies between channels. We show that these blocks can be stacked together t
+
+[p.1] (excitation)
+  1 Squeeze-and-Excitation Networks Jie Hu[0000−0002−5150−1003] Li Shen[0000−0002−2283−4976] Samuel Albanie[0000−0001−9736−5134] Gang Sun[0000−0001−6913−6799] Enhua Wu[0000−0002−2174−1428] Abstract—The central building block o
+
+[p.1] (excitation)
+  dings throughout its feature hierarchy. In this work, we focus instead on the channel relationship and propose a novel architectural unit, which we term the “Squeeze-and-Excitation” (SE) block, that adaptively recalibrates channel-wise feature responses by explicitly modelling interdependencies between channels. We show that these blocks can be stacked together to form SENet ar
+
+
+====================================================================================================
+## 2023_WRANet.pdf
+
+[p.1] (88\.89)
+  segmentation, achieving a Dice score of 78.99%, an IoU score of 68.96%, a precision of 85.21%, and a sensitivity score of 80.98%. In polyp segmentation, a Dice score of 88.89%, an IoU score of 81.74%, a precision rate of 91.32%, and a sensitivity score of 91.07% were achieved. Furthermore, our comparison with state-of-the-art techniques demonstrates the competitiveness of
+
+[p.8] (88\.89)
+  5.17%, in the aneurysm dataset IAS3 Dice, IoU, PR, and SE were 39.71, 30.40, 46.37, and 40.54% respectively, and in the CVC- ClinicDB dataset, Dice, IoU, PR, and SE were 88.89, 81.74, 91.32, and 91.07%, respectively. However, the DeepLabv3+ network achieved the worst performance on the Dice metric on all datasets. Ablation studies. We conducted ablation studies separately
+
+[p.1] (discrete wavelet)
+  residual attention network (WRANet) for medical image segmentation. We replace the standard downsampling modules (e.g., maximum pooling and average pooling) in CNNs with discrete wavelet transform, decompose the features into low- and high-frequency components, and remove the high-frequency components to eliminate noise. At the same time, the problem of feature loss can be effectivel
+
+[p.1] (discrete wavelet)
+  were achieved. Furthermore, our comparison with state-of-the-art techniques demonstrates the competitiveness of the WRANet network. Keywords Medical image segmentation · Discrete wavelet transform · Downsampling · Residual attention module · Aneurysm image B Shudong Wang shudongwang2013@souhu.com Yawu Zhao zhaoyawu9608@163.com Yulin Zhang zhangyulin@sdust.edu.cn Sibo Qiao siboqiao@12
+
+[p.1] (downsampl)
+  robustness and segmentation performance of the network, we propose a wavelet residual attention network (WRANet) for medical image segmentation. We replace the standard downsampling modules (e.g., maximum pooling and average pooling) in CNNs with discrete wavelet transform, decompose the features into low- and high-frequency components, and remove the high-frequency component
+
+[p.1] (downsampl)
+  ur comparison with state-of-the-art techniques demonstrates the competitiveness of the WRANet network. Keywords Medical image segmentation · Discrete wavelet transform · Downsampling · Residual attention module · Aneurysm image B Shudong Wang shudongwang2013@souhu.com Yawu Zhao zhaoyawu9608@163.com Yulin Zhang zhangyulin@sdust.edu.cn Sibo Qiao siboqiao@126.com Mufei Zhang zhan
+
+
+====================================================================================================
+## 2021_PerimeterLoss.pdf
+
+[p.4] (dilation)
+  A Surprisingly Effective Perimeter-based Loss for Medical Image Segmentation Min1 Max1 max pooling/dilation - min pooling/erosion Relu layer Contour Image Contour Image Figure 2: Principle of the contour function ϝ: the diﬀerence (-) between the erosion (min- pool) and the dilation(max-pool) layers followe
+
+[p.4] (dilation)
+  ion - min pooling/erosion Relu layer Contour Image Contour Image Figure 2: Principle of the contour function ϝ: the diﬀerence (-) between the erosion (min- pool) and the dilation(max-pool) layers followed by a ReLu layer. Right side: example of ground-truth segmentation image and respective contour image. 3. Proposed Method Many works in the ﬁeld base their losses on distance
+
+[p.4] (erosion)
+  A Surprisingly Effective Perimeter-based Loss for Medical Image Segmentation Min1 Max1 max pooling/dilation - min pooling/erosion Relu layer Contour Image Contour Image Figure 2: Principle of the contour function ϝ: the diﬀerence (-) between the erosion (min- pool) and the dilation(max-pool) layers followed by a ReLu layer. Rig
+
+[p.4] (erosion)
+  Min1 Max1 max pooling/dilation - min pooling/erosion Relu layer Contour Image Contour Image Figure 2: Principle of the contour function ϝ: the diﬀerence (-) between the erosion (min- pool) and the dilation(max-pool) layers followed by a ReLu layer. Right side: example of ground-truth segmentation image and respective contour image. 3. Proposed Method Many works in the ﬁeld
+
+[p.1] (perimeter)
+  Proceedings of Machine Learning Research 143:158–167, 2021 MIDL 2021 – Full paper track A Surprisingly Eﬀective Perimeter-based Loss for Medical Image Segmentation Rosana El Jurdi 1,2 rosana.el-jurdi@univ-rouen.fr Caroline Petitjean 1 caroline.petitjean@univ-rouen.fr Paul Honeine 1 paul.honeine@univ-rouen.fr Veronika Ch
+
+[p.1] (perimeter)
+  nt problems. Moreover, they depend on dis- tance maps which tend to underestimate the contour-to-contour distances. We propose a novel loss constraint that optimizes the perimeter length of the segmented object relative to the ground-truth segmentation. The novelty lies in computing the perimeter with a soft approximation of the contour of the probability map via specialized n
+
+
+====================================================================================================
+## 2019_KarimiHD.pdf
+
+[p.1] (Hausdorff)
+  1 Reducing the Hausdorff Distance in Medical Image Segmentation with Convolutional Neural Networks Davood Karimi, and Septimiu E. Salcudean, Fellow, IEEE Abstract—The Hausdorff Distance (HD) is widely used in eval- uating me
+
+[p.1] (Hausdorff)
+  1 Reducing the Hausdorff Distance in Medical Image Segmentation with Convolutional Neural Networks Davood Karimi, and Septimiu E. Salcudean, Fellow, IEEE Abstract—The Hausdorff Distance (HD) is widely used in eval- uating medical image segmentation methods. However, existing segmentation methods do not attempt to reduce HD directly. In this paper, we present novel loss func
+
+[p.1] (erosion)
+  ntation probability map produced by a CNN. One method makes use of the distance transform of the segmentation boundary. Another method is based on applying morphological erosion on the difference between the true and estimated segmentation maps. The third method works by applying circular/spherical convolution kernels of different radii on the segmentation probability maps.
+
+[p.4] (erosion)
+  ckness of the difference between the true and estimated segmentations, ¯p△¯q. Therefore, one can obtain an approximate estimation of HD(δq, δp) by applying morphological erosion on ¯p △¯q. (a) (b) (c) (d) Figure 5. (a) An example of a 2D ground-truth and predicted segmentations, denoted with ¯p and ¯q, respectively. (b) The map of ¯p △¯q for this example; hd(δp, δq) and hd(δ
+
+[p.1] (distance transform)
+  thods with the goal of reducing HD directly. We propose three methods to estimate HD from the segmentation probability map produced by a CNN. One method makes use of the distance transform of the segmentation boundary. Another method is based on applying morphological erosion on the difference between the true and estimated segmentation maps. The third method works by applying circular
+
+[p.3] (distance transform)
+  s with 2D as well as 3D images in Section III. Figure 2. A visual depiction of some of the notations used in this paper. B. Estimation of the Hausdorff Distance Based on Distance Transforms Our ﬁrst approximation of HD is based on distance trans- forms (DT). The DT of a digital image is a derived repre- sentation of that image where each pixel has a value equal to its distance to an ob
+
+
+====================================================================================================
+## 2021_BoundaryIoU.pdf
+
+[p.1] (Boundary IoU)
+  Boundary IoU: Improving Object-Centric Image Segmentation Evaluation Bowen Cheng1* Ross Girshick2 Piotr Doll´ar2 Alexander C. Berg2 Alexander Kirillov2 1UIUC 2Facebook AI Research (FAIR) Abstract We present Bound
+
+[p.1] (Boundary IoU)
+  c Image Segmentation Evaluation Bowen Cheng1* Ross Girshick2 Piotr Doll´ar2 Alexander C. Berg2 Alexander Kirillov2 1UIUC 2Facebook AI Research (FAIR) Abstract We present Boundary IoU (Intersection-over-Union), a new segmentation evaluation measure focused on bound- ary quality. We perform an extensive analysis across dif- ferent error types and object sizes and show that Boundary
+
+[p.1] (boundary quality)
+  based evaluation metrics. We hope that the adop- tion of the new boundary-sensitive evaluation metrics will lead to rapid progress in segmentation methods that im- prove boundary quality.1 1. Introduction The Common Task Framework [27], in which standard- ized tasks, datasets, and evaluation metrics are used to track research progress, yields impressive results. For exam- ple, resear
+
+[p.1] (boundary quality)
+  ance segmentation, where, among the multitude of papers contributing to the impressive 86% relative improvement in AP (e.g., [41, 4, 1, 19, 25]), only a few address mask boundary quality. Note that mask boundary quality is an essential aspect of image segmentation, as various downstream applications directly beneﬁt from more precise object segmentations [39, 33, 34]. However, the dom
+
+[p.3] (dilation)
+  ed by real models. We aim to counteract this limitation by using a diverse set of error types. Figure 2 depicts an example of each error type we consider: • Scale error. Dilation/erosion are applied to the ground truth masks. The error severity is controlled by the kernel radius of the morphological operations. • Boundary localization error. Random Gaussian noise is added to
+
+[p.4] (dilation)
+  (a) Scale (dilation) (b) Scale (erosion) (c) Boundary localization (d) Object localization (e) Boundary approximation (f) Inner mask Figure 2: Examples of error types generated from a single ground truth mask. The red c
+
+
+====================================================================================================
+## 2021_RCPS.pdf
+
+[p.1] (risk[- ]controlling)
+  Distribution-Free, Risk-Controlling Prediction Sets Stephen Bates∗, Anastasios Angelopoulos∗, Lihua Lei∗, Jitendra Malik, Michael I. Jordan August 6, 2021 Abstract While improving prediction accuracy has been the focus of machine learn
+
+[p.1] (risk[- ]controlling)
+  represent uncertainty, since such sets can be readily constructed from any existing predictor and, moreover, they are often interpretable. We call our proposed technique risk-controlling prediction sets (RCPS). The idea is to produce prediction sets that provide distribution-free, ﬁnite-sample control of a general loss. As an example, consider classifying MRI images as in Figure 1. E
+
+[p.5] (monotone)
+  ms in a variety of prediction tasks. Remark 1. Upper conﬁdence bound calibration holds in more generality than the concrete instantiation above. The result holds for any monotone R(λ) with a pointwise upper conﬁdence bound ˆR+(λ). We present the general statement in Appendix A. Remark 2. The above result also implies that UCB calibration gives an RCPS even if the data used to
+
+[p.20] (monotone)
+  nd, recall that there are two mathematical ingredients to the UCB calibration framework. First, there is a family of possible predictors such that the notion of error is monotone in the parameter indexing the family, λ ∈Λ. Second, for each element λ, we have a pointwise concentration result that gives the upper conﬁdence bound for the error at that λ. With these two ingredien
+
+
+====================================================================================================
+## 2022_ConformalRiskControl.pdf
+
+[p.1] (monotone)
+  ornia, Berkeley 2Massachusetts Institute of Technology 3Stanford University 4Google Research Abstract We extend conformal prediction to control the expected value of any monotone loss function. The algorithm generalizes split conformal prediction together with its coverage guarantee. Like conformal prediction, the conformal risk control procedure is tight up to an O(1/n) fact
+
+[p.2] (monotone)
+  oo conservative, E h Ln+1  ˆλ i ≥α − 2B n + 1. We show the reduction from conformal risk control to conformal prediction in Section 2.3. Furthermore, if the risk is non-monotone, then this algorithm does not control the risk; we discuss this in Section 2.4. Finally, we provide both practical examples using real-world data and several theoretical extensions of our procedure i
+
+[p.1] (risk)
+  arXiv:2208.02814v4 [stat.ME] 13 Jun 2025 Conformal Risk Control Anastasios N. Angelopoulos1, Stephen Bates1, Adam Fisch2, Lihua Lei3, and Tal Schuster4 1University of California, Berkeley 2Massachusetts Institute of Technology 3Stanford University 4Google
+
+[p.1] (risk)
+  value of any monotone loss function. The algorithm generalizes split conformal prediction together with its coverage guarantee. Like conformal prediction, the conformal risk control procedure is tight up to an O(1/n) factor. We also introduce extensions of the idea to distribution shift, quantile risk control, multiple and adversarial risk control, and expectations of U-
+
+[p.1] (threshold)
+  ue classes in Yi. To that end, we post-process the model’s raw outputs into the set of classes with sufficiently high scores, Cλ(x) = {k : f(X)k ≥1 −λ}. Note that as the threshold λ 1
+
+[p.2] (threshold)
+  grows, we include more classes in Cλ(x)—i.e., it becomes more conservative. In this case, conformal risk control finds a threshold value ˆλ that controls the fraction of missed classes, i.e., the expected value of ℓ  Cˆλ(Xn+1), Yn+1  = 1 −|Yn+1 ∩Cλ(Xn+1)|/|Yn+1|. Setting α = 0.1 would ensure that our algorithm produces sets Cˆλ
+
+
+====================================================================================================
+## 2021_GentleIntroCP.pdf
+
+[p.20] (exchangeab)
+  formal outlier detection can also be seen as a hypothesis testing problem; points that are rejected as outliers have a p-value less than alpha for the null hypothesis of exchangeability with the calibration data. This interpretation is closely related to the classical permutation test [20, 21]. See [22–24] for more on this interpretation and other statistical properties of conf
+
+[p.21] (exchangeab)
+  ediction set in the standard way, C(x) = {y : s(x, y) ≤ˆq(x)} . By accounting for the covariate shift in our choice of ˆq, we were able to make our calibration data look exchangeable with the test point, achieving the following guarantee. Theorem 3 (Conformal prediction under covariate shift [25]). Suppose (X1, Y1), ..., (Xn, Yn) are drawn i.i.d. from P × PY |X and that (Xtest,
+
+[p.6] (split conformal)
+  )  ≥1 −α. See Appendix D for a proof and a statement that includes the upper bound in (1). We note that the above is only a special case of conformal prediction, called split conformal prediction. This is the most widely-used version of conformal prediction, and it will be our primary focus. To complete the picture, we describe conformal prediction in full generality later in Secti
+
+[p.27] (split conformal)
+  6 Full conformal prediction Up to this point, we have only considered split conformal prediction, otherwise known as inductive conformal prediction. This version of conformal prediction is computationally attractive, since it only requires ﬁtting the model one time, but it sacriﬁces s
+
+[p.2] (coverage)
+  . . . . . . . . . . . . . . . . . 12 3.2 The Eﬀect of the Size of the Calibration Set . . . . . . . . . . . . . . . . . . . . . . . . . . . . 14 3.3 Checking for Correct Coverage . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . 15 4 Extensions of Conformal Prediction 16 4.1 Group-Balanced Conformal Prediction . . . . . . . . . . . . . . . . . . . . . . .
+
+[p.3] (coverage)
+  isk Control 45 B.1 Multi-label Classiﬁcation with FDR Control . . . . . . . . . . . . . . . . . . . . . . . . . . . . 46 B.2 Simultaneous Guarantees on OOD Detection and Coverage . . . . . . . . . . . . . . . . . . . 46 C Concentration Properties of the Empirical Coverage 49 D Theorem and Proof: Coverage Property of Conformal Prediction 50 3
+
+
+====================================================================================================
+## 2025_ConformalLesionSeg.pdf
+
+[p.1] (false negative rate)
+  sting models empirically apply fixed thresholds (e.g., 0.5) to differentiate lesions from the background, offering no statis- tical guarantees on key metrics such as the false negative rate (FNR). This lack of principled risk control undermines their reliable deployment in high-stakes clinical applications, es- pecially in challenging scenarios like 3D lesion segmentation (3D-LS). To ad
+
+[p.1] (false negative rate)
+  t Figure 1: Illustration of 3D-LS tasks. to delineate target structures from background, lacking sta- tistically valid guarantees for critical safety metrics such as the false negative rate (FNR) (He et al. 2025). This limitation compromises their trustworthiness in risk-sensitive clinical environments, where robust risk control is essential (Moglia et al. 2025). In particular, under-se
+
+[p.1] (threshold)
+  nent of precision medicine, enabling accurate localization and delin- eation of pathological regions, such as lesions. However, ex- isting models empirically apply fixed thresholds (e.g., 0.5) to differentiate lesions from the background, offering no statis- tical guarantees on key metrics such as the false negative rate (FNR). This lack of principled risk control undermines t
+
+[p.1] (threshold)
+  e 3D lesion segmentation (3D-LS). To address this issue, we propose a risk-constrained framework, termed Conformal Lesion Segmentation (CLS), that calibrates data-driven thresholds via conformalization to ensure the test-time FNR remains below a target tolerance ε under desired risk levels. CLS begins by holding out a cal- ibration set to analyze the threshold setting for each
+
+[p.1] (guarantee)
+  gions, such as lesions. However, ex- isting models empirically apply fixed thresholds (e.g., 0.5) to differentiate lesions from the background, offering no statis- tical guarantees on key metrics such as the false negative rate (FNR). This lack of principled risk control undermines their reliable deployment in high-stakes clinical applications, es- pecially in challenging scen
+
+[p.1] (guarantee)
+  inarization Threshold 1-t Binarization Threshold 1-t Figure 1: Illustration of 3D-LS tasks. to delineate target structures from background, lacking sta- tistically valid guarantees for critical safety metrics such as the false negative rate (FNR) (He et al. 2025). This limitation compromises their trustworthiness in risk-sensitive clinical environments, where robust risk contr
+
+
+====================================================================================================
+## 2025_CRCFDR.pdf
+
+[p.1] (false discovery rate)
+  STATISTICAL MANAGEMENT OF THE FALSE DISCOVERY RATE IN MEDICAL INSTANCE SEGMENTATION BASED ON CONFORMAL RISK CONTROL Mengxia Dai∗ College of Engineering Yanbian University Yanji, Jilin 133002, China 1224022456@ybu.edu.cn Wenqian Luo School of Health a
+
+[p.2] (false discovery rate)
+  r feature extraction Topol [2019]. Experimental results demonstrate that our method achieves user-specified control over False Negative Rate (FNR) Liu et al. [2021b] and False Discovery Rate (FDR) metrics Ren et al. [2015]. Furthermore, we analyze the sensitivity under different ratios of calibration samples to test samples Uijlings et al. [2015]. Despite using fewer data points for cali
+
+[p.1] (calibration)
+  p learning models such as Mask R-CNN and BlendMask have achieved remarkable progress, their application in high- risk medical scenarios remains constrained by confidence calibration issues, which may lead to misdiagnosis. To address this challenge, we propose a robust quality control framework based on conformal prediction theory. This framework innovatively constructs a risk-aw
+
+[p.1] (calibration)
+  constructs a risk-aware dynamic threshold mechanism that adaptively adjusts segmentation decision boundaries according to clinical requirements.Specifically, we design a calibration-aware loss function that dynamically tunes the segmentation threshold based on a user-defined risk level α. Utilizing exchangeable calibration data, this method ensures that the expected FNR or FDR o
+
+[p.1] (risk)
+  STATISTICAL MANAGEMENT OF THE FALSE DISCOVERY RATE IN MEDICAL INSTANCE SEGMENTATION BASED ON CONFORMAL RISK CONTROL Mengxia Dai∗ College of Engineering Yanbian University Yanji, Jilin 133002, China 1224022456@ybu.edu.cn Wenqian Luo School of Health and Environmental Engineering Shenzhen Technology Universi
+
+[p.1] (risk)
+  lesions, tumors, and anatomical structures. Although deep learning models such as Mask R-CNN and BlendMask have achieved remarkable progress, their application in high- risk medical scenarios remains constrained by confidence calibration issues, which may lead to misdiagnosis. To address this challenge, we propose a robust quality control framework based on conformal pre
+
+
+====================================================================================================
+## 2026_CRCPETCT.pdf
+
+[p.1] (binary)
+  ponent risk-controlling prediction sets (RCPS) to ﬁxed, pretrained LesionTracer probability maps for 900 autoPET cases, asking whether one global threshold can certify a binary missed-lesion loss and a continuous voxel-level missed-tumour loss. At α = δ = 0.1, the binary loss cannot be certiﬁed: on lesion-positive calibration cases its empirical risk is 0.177 even at the sm
+
+[p.1] (binary)
+  s for 900 autoPET cases, asking whether one global threshold can certify a binary missed-lesion loss and a continuous voxel-level missed-tumour loss. At α = δ = 0.1, the binary loss cannot be certiﬁed: on lesion-positive calibration cases its empirical risk is 0.177 even at the smallest threshold we evaluated. The voxel loss behaves diﬀerently: an empirical-Bernstein bound
+
+[p.1] (binary)
+  ated. The voxel loss behaves diﬀerently: an empirical-Bernstein bound certiﬁes ˆλ = 0.78, giving P(Rvox(ˆλ) ≤0.1) ≥0.9, once lesion-free cases contribute zero loss. This binary infeasibility holds for coverage requirements γ from 0.5 to 0.9. We read the contrast as a statement about the prediction family: a global threshold cannot recover lesions the network never supported
+
+[p.1] (0\.177)
+  sion loss and a continuous voxel-level missed-tumour loss. At α = δ = 0.1, the binary loss cannot be certiﬁed: on lesion-positive calibration cases its empirical risk is 0.177 even at the smallest threshold we evaluated. The voxel loss behaves diﬀerently: an empirical-Bernstein bound certiﬁes ˆλ = 0.78, giving P(Rvox(ˆλ) ≤0.1) ≥0.9, once lesion-free cases contribute zero l
+
+[p.2] (0\.177)
+  feasible RCPS threshold. We report λ = 10−5 only as a smallest-evaluated- threshold stress test, not as a certiﬁed choice. Even there, the empirical calibration risk is 0.177 > 0.1, before the Hoeﬀding correction of 0.071; the empirical Bernstein UCB is still 0.242. This is a support failure of the ﬁxed prediction family, not of conformal risk control. The conclusion is r
+
+[p.2] (0\.177)
+  ly, not of conformal risk control. The conclusion is robust for γ ∈{0.5, 0.6, 0.7, 0.8, 0.9}, whose smallest-evaluated-threshold empirical risks are 0.106, 0.118, 0.139, 0.177, 0.310. By contrast, the voxel-level empirical risk at λ = 0.5 is 0.058, and the Bernstein UCB remains below 0.1 through ˆλ = 0.78, where it is 0.093. The held-out test risk at this threshold is 0.06
+
+[p.1] (support)
+  for coverage requirements γ from 0.5 to 0.9. We read the contrast as a statement about the prediction family: a global threshold cannot recover lesions the network never supported. Keywords: risk-controlling prediction sets; conformal risk control; PET/CT; tumour segmentation; lesion-level uncertainty 1. Problem and Method In PET/CT tumour segmentation, the clinically releva
+
+[p.2] (support)
+  ertiﬁed choice. Even there, the empirical calibration risk is 0.177 > 0.1, before the Hoeﬀding correction of 0.071; the empirical Bernstein UCB is still 0.242. This is a support failure of the ﬁxed prediction family, not of conformal risk control. The conclusion is robust for γ ∈{0.5, 0.6, 0.7, 0.8, 0.9}, whose smallest-evaluated-threshold empirical risks are 0.106, 0.118, 0
+
+[p.2] (support)
+  ion is determined jointly by the target risk and expressive power of the prediction family. A global threshold cannot recover lesions that receive insuﬃcient probability support, even when it is made very permissive. The voxel guarantee should therefore not be interpreted as lesion-level certiﬁcation. The next stage is a lesion-adaptive conformal family that calibrates compo
+
+
+====================================================================================================
+## 2024_AdaptUNet.fulltext.xml (Europe PMC OA)
+
+(0\.9104)
+  wavelet transformations are used to extract useful features overlooked in conventional image processing. The model achieves benchmark results with a Dice coefficient of 0.9104, an Intersection over Union (IoU) coefficient of 0.8368, and a Balanced Accuracy of 0.9880 on the CVC-300 dataset. Additionally, it shows exceptional performance on other datasets, including Kvasir-S
+
+(0\.9104)
+  35 ] 0.7584 0.6839 0.9130 0.8404 0.7688 0.9677 BDG-Net [ 36 ] 0.8012 0.7276 0.9103 0.9070 0.8425 0.9771 MFBGR [ 37 ] 0.8031 0.7281 0.9081 0.9174 0.8550 0.9769 AdaptUNet 0.9104 0.8368 0.9880 0.8075 0.7215 0.9687 Table 3 Ablation study on the CVC-300 dataset. Table 3 Model Configuration Dice Coefficient IoU Coefficient Balanced Accuracy Original Model (Complete Network) 0.91
+
+(0\.9104)
+  15 0.9687 Table 3 Ablation study on the CVC-300 dataset. Table 3 Model Configuration Dice Coefficient IoU Coefficient Balanced Accuracy Original Model (Complete Network) 0.9104 0.8368 0.9880 Without Wavelet Transform 0.0815 0.0429 0.7185 Without Extra Decoder Blocks 0.0649 0.0338 0.6522 Without Both Components 0.0635 0.0331 0.6487 Table 4 Evaluation metrics of AdaptUNet on
+
+(wavelet)
+  1057 PMC11261057.1 11261057 11261057 39040380 10.1016/j.heliyon.2024.e33655 S2405-8440(24)09686-5 e33655 1 Research Article Efficient colorectal polyp segmentation using wavelet transformation and AdaptUNet: A hybrid U-Net Rajasekar Devika a Theja Girish a Prusty Manas Ranjan manas.iter144@gmail.com b ⁎ Chinara Suchismita c a School of Computer Science and Engineering, Vello
+
+(wavelet)
+  mechanisms and skip connections facilitate the effective combination of low-level details and high-level contextual information for accurate polyp segmentation. Further, wavelet transformations are used to extract useful features overlooked in conventional image processing. The model achieves benchmark results with a Dice coefficient of 0.9104, an Intersection over Union (Io
+
+(wavelet)
+  ce, thus promising an improved precision and reduction in manual labour for colorectal polyp detection. Keywords Deep learning U-Net Colorectal polyps Polyp segmentation Wavelet transformation Data augmentation pmc-status-qastatus 0 pmc-status-live yes pmc-status-embargo no pmc-status-released yes pmc-prop-open-access yes pmc-prop-olf no pmc-prop-manuscript no pmc-prop-legal
+
+(Dice)
+  gmentation. Further, wavelet transformations are used to extract useful features overlooked in conventional image processing. The model achieves benchmark results with a Dice coefficient of 0.9104, an Intersection over Union (IoU) coefficient of 0.8368, and a Balanced Accuracy of 0.9880 on the CVC-300 dataset. Additionally, it shows exceptional performance on other datase
+
+(Dice)
+  res for the automatic segmentation of colorectal tumor tissue samples. They found that a shared DenseNet and LinkNet architecture outperformed other methods, achieving a dice similarity index of 82.74 % ± 1.77, accuracy of 87.07 % ± 1.56, and an f1-score value of 82.79 % ± 1.79 [ 20 ]. Zhang et al. developed a method for label-free colorectal cancer screening that combine
+
+(Dice)
+  perKvasir dataset) and the external datasets (CVC-300, ETIS-LaribDB, Kvasir-SEG, and CVC-ColonDB). Here, its performance is assessed using various metrics, including the Dice coefficient, Intersection over Union (IoU), and Balanced Accuracy. This evaluation process is repeated for 100 epochs to ensure the model's robustness and accuracy over multiple iterations. The final
+
+(Kvasir)
+  Union (IoU) coefficient of 0.8368, and a Balanced Accuracy of 0.9880 on the CVC-300 dataset. Additionally, it shows exceptional performance on other datasets, including Kvasir-SEG and Etis-LaribDB. Training was performed using the Hyper Kvasir segmented images dataset, further evidencing the model's ability to handle diverse data inputs. The proposed method offers a compre
+
+(Kvasir)
+  0 on the CVC-300 dataset. Additionally, it shows exceptional performance on other datasets, including Kvasir-SEG and Etis-LaribDB. Training was performed using the Hyper Kvasir segmented images dataset, further evidencing the model's ability to handle diverse data inputs. The proposed method offers a comprehensive and efficient implementation for polyp detection without com
+
+(Kvasir)
+  rove patient outcomes. This promising field could potentially lead to major breakthroughs in colorectal cancer diagnosis and treatment. 4 Datasets In the study, the HyperKvasir Segmented Images dataset, consisting of 1000 images focused on the polyp class, was employed for training the machine learning model. This dataset was divided into training, validation, and testing s

@@ -1,0 +1,42 @@
+__pycache__/
+*.py[cod]
+*$py.class
+*.pth
+*.zip
+checkpoints/*.pth
+checkpoints/*.pt
+.cache/
+
+# ---- 数据集：派生图像一律不入库（体积大、可由 builder 脚本重建）----
+data/synthetic_medseg/**
+data/kvasir_triage/**
+data/kvasir_seg/images/
+data/kvasir_seg/masks/
+data/kvasir_seg/*.zip
+data/kvasir_triage_test/**
+data/mixed_cohort_train/**
+
+# ---- 文献 PDF：本地保留，不入库（129MB 且不可压缩）----
+papers/
+
+
+# Agent session data
+.workbuddy/
+.pytest_cache/
+
+# Experiment outputs & logs (archived outside repo)
+results*/
+*.log
+scratch/
+
+# compiled manuscript PDFs are build artifacts (reproducible from the .tex / .docx)
+05_Paper_Draft/*.pdf
+05_Paper_Draft/*.aux
+05_Paper_Draft/*.log
+05_Paper_Draft/*.out
+
+# Word 稿件是 build_docx_official.py 的生成物（唯一真源是 zh/content.py）
+05_Paper_Draft/*.docx
+05_Paper_Draft/archive/*.docx
+05_Paper_Draft/*_new.docx
+scratch_pages/

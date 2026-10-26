@@ -1,0 +1,10 @@
+{
+  "calibrated_tau": 0.17,
+  "target_fnr_alpha": 0.05,
+  "statistical_confidence_1_minus_delta": 0.95,
+  "calibration_lesion_count": 60,
+  "calibration_total_count": 120,
+  "guaranteed_ucb_fnr": 0.0487,
+  "calibration_empirical_fnr": 0.0,
+  "guaranteed_sensitivity_lower_bound": 0.9513
+}

@@ -1,0 +1,51 @@
+[
+  {
+    "model": "unet",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 773.5838053226471
+  },
+  {
+    "model": "attention_unet",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 837.6076610088348
+  },
+  {
+    "model": "unet_plus_plus",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 3252.2718393802643
+  },
+  {
+    "model": "fee_net_no_dwt",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 929.2241280078888
+  },
+  {
+    "model": "fee_net_no_egm",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 798.7421877384186
+  },
+  {
+    "model": "fee_net_no_bl",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 970.9577202796936
+  },
+  {
+    "model": "fee_net",
+    "fold": 0,
+    "seed": 42,
+    "status": "SUCCESS",
+    "time_s": 988.7329320907593
+  }
+]

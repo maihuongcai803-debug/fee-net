@@ -1,0 +1,79 @@
+[
+  {
+    "model": "U-Net (Baseline)",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "1.0000e+00",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "Attention U-Net",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "1.0000e+00",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "UNet++ (Nested SOTA)",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "1.0000e+00",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "FEE-Net (w/o DWT)",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "1.0000e+00",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "FEE-Net (w/o EGM)",
+    "dice_mean": 1.926702368366488e-08,
+    "dice_std": 1.6938756159867852e-08,
+    "iou_mean": 1.926702368366488e-08,
+    "iou_std": 1.6938756159867852e-08,
+    "hd95_mean": 100.9308739667466,
+    "hd95_std": 8.509094841795296,
+    "p_val": "1.7971e-01",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "FEE-Net (w/o Boundary Loss)",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "1.0000e+00",
+    "significance": "Not Sig (p>=0.05)"
+  },
+  {
+    "model": "FEE-Net (Proposed Full)",
+    "dice_mean": 1.926706652902177e-08,
+    "dice_std": 1.693875953713275e-08,
+    "iou_mean": 1.926706652902177e-08,
+    "iou_std": 1.693875953713275e-08,
+    "hd95_mean": 100.0,
+    "hd95_std": 0.0,
+    "p_val": "Reference",
+    "significance": "Target Model"
+  }
+]

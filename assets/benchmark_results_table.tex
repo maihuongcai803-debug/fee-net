@@ -1,0 +1,17 @@
+\begin{table}[htbp]
+\centering
+\caption{Quantitative Comparison on Benchmark Test Set}
+\begin{tabular}{lccccccc}
+\hline
+Method / Model & Params (M) & FLOPs (G) & Dice (%) & mIoU (%) & HD95 (voxel) & Precision (%) & Recall (%) \\
+\hline
+U-Net (Baseline) & 7.76 & 13.75 & 80.30 & 71.00 & 42.55 & 86.56 & 78.72 \\
+Attention U-Net & 7.85 & 14.03 & 79.24 & 69.66 & 42.75 & 83.45 & 81.16 \\
+UNet++ (Nested SOTA) & 9.16 & 34.62 & 81.59 & 72.84 & 39.50 & 85.50 & 82.43 \\
+FEE-Net (w/o DWT) & 8.55 & 12.82 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 \\
+FEE-Net (w/o EGM) & 8.50 & 11.83 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 \\
+FEE-Net (w/o Boundary Loss) & 8.52 & 12.54 & 0.00 & 0.00 & 100.00 & 100.00 & 0.00 \\
+FEE-Net (Proposed Full) & 8.52 & 12.54 & 1.52 & 0.86 & 108.87 & 62.15 & 0.81 \\
+\hline
+\end{tabular}
+\end{table}

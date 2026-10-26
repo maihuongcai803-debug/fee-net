@@ -1,0 +1,225 @@
+{
+  "main": {
+    "id": "3443afa8ad7f49bf",
+    "type": "split",
+    "children": [
+      {
+        "id": "0101f0ea9df1f511",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "0eb889fa60d3e777",
+            "type": "leaf",
+            "state": {
+              "type": "image",
+              "state": {
+                "file": "data/kvasir_seg/images/cju_0004.jpg"
+              },
+              "icon": "lucide-image",
+              "title": "cju_0004"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "eb3009188e248765",
+    "type": "split",
+    "children": [
+      {
+        "id": "055c33fb392a7009",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "449ccdeb27789776",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-folder-closed",
+              "title": "文件列表"
+            }
+          },
+          {
+            "id": "41ef18866f076f90",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "搜索"
+            }
+          },
+          {
+            "id": "e622417f34e90c18",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-bookmark",
+              "title": "书签"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 360.16668701171875
+  },
+  "right": {
+    "id": "2baa4d1d30412a53",
+    "type": "split",
+    "children": [
+      {
+        "id": "074ce55c2f482860",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "52717e9825779277",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "02_Literature_Review/Paper_01_MedSAM_NatComm2024.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "反向链接"
+            }
+          },
+          {
+            "id": "090afcd5f0e73598",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "02_Literature_Review/Paper_01_MedSAM_NatComm2024.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "出链"
+            }
+          },
+          {
+            "id": "af8799e568fa5881",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "标签"
+            }
+          },
+          {
+            "id": "5f87538e3e3614ea",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "添加笔记属性"
+            }
+          },
+          {
+            "id": "620e15265405fc26",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "02_Literature_Review/Paper_01_MedSAM_NatComm2024.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "大纲"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:打开快速切换": false,
+      "graph:查看关系图谱": false,
+      "canvas:新建白板": false,
+      "daily-notes:打开/创建今天的日记": false,
+      "templates:插入模板": false,
+      "command-palette:打开命令面板": false,
+      "bases:新建数据库": false
+    }
+  },
+  "active": "449ccdeb27789776",
+  "lastOpenFiles": [
+    "04_Experiment_Logs/Exp_011_Real_Kvasir_SEG_Benchmark_and_Significance.md",
+    "assets/statistical_significance_report.json",
+    "run_statistical_eval.py",
+    "checkpoints/unet_plus_plus_history.json",
+    "assets/unet_plus_plus_training_curves.png",
+    "checkpoints/unet_plus_plus_best.pth",
+    "run_real_benchmark.py",
+    "04_Experiment_Logs/Exp_009_Kvasir_SEG_Real_Dataset_and_5Fold_CV.md",
+    "04_Experiment_Logs/Exp_010_Kvasir_SEG_Real_Dataset_and_5Fold_CV.md",
+    "data/kvasir_seg/images/cju_0002.jpg",
+    "04_Experiment_Logs/Exp_001_FEENet_Architecture.md",
+    "03_Methodology/System1_System2_Framework.md",
+    "03_Methodology/Network_Architecture.md",
+    "03_Methodology/Mathematical_Formulation.md",
+    "02_Literature_Review/Paper_03_Attention_UNet_MIDL2018.md",
+    "02_Literature_Review/Paper_01_MedSAM_NatComm2024.md",
+    "02_Literature_Review/Literature_Summary.md",
+    "01_Research_Proposal/Proposal_Overview.md",
+    "05_Paper_Draft/Paper_Outline.md",
+    "05_Paper_Draft/Paper_Summary.md",
+    "04_Experiment_Logs/Exp_Index.md",
+    "04_Experiment_Logs/Exp_010_Laya_Visual_Triage_System1.md",
+    "04_Experiment_Logs/Exp_008_UNetPlusPlus_Baseline.md",
+    "04_Experiment_Logs/Exp_007_EGM_Residual_Gate_and_Dual_Return.md",
+    "04_Experiment_Logs/Exp_006_Reviewer_Critique_and_Improvement_Plan.md",
+    "04_Experiment_Logs/Exp_005_Dual_System_Laya_FEENet.md",
+    "04_Experiment_Logs/Exp_004_Benchmark_and_Ablation_Results.md",
+    "04_Experiment_Logs/Exp_003_Laya_Integration_and_System1_Routing.md",
+    "04_Experiment_Logs/Exp_002_Baselines_and_Dataset_Pipeline.md",
+    "GEMINI.md",
+    "00_Index.md",
+    "06_Code_Docs/Project_Architecture.md",
+    "06_Code_Docs/Environment_Setup.md"
+  ]
+}

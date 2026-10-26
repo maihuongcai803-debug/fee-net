@@ -1,0 +1,12 @@
+{
+  "trained_params": 12740,
+  "train_samples": 1173,
+  "train_lesion": 425,
+  "train_normal": 748,
+  "leakage_dropped_train": 0,
+  "leakage_dropped_val": 0,
+  "best_epoch": 22,
+  "val_separation": 0.9877998232841492,
+  "val_acc": 0.9965606190885641,
+  "out": "scratch\\triage_stage2e.pth"
+}

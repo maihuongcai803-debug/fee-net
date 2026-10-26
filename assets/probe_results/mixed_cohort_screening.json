@@ -1,0 +1,131 @@
+{
+  "checkpoint": "scratch\\triage_stage2e.pth",
+  "device": "cuda",
+  "cohort": {
+    "calib": 75,
+    "calib_normals": 134,
+    "certify_lesions": 75,
+    "certify_normals": 133
+  },
+  "tau_star": 0.59,
+  "calib_cp_upper_pct": 3.92,
+  "certify_fnr_pct": 0.0,
+  "certify_cp_upper_fnr_pct": 3.92,
+  "guarantee_holds": true,
+  "normal_bypass_pct": 99.25,
+  "bypassed_fraction": 0.6346,
+  "gate_latency_ms": 2.837,
+  "full_latency_ms": 11.295,
+  "effective_latency_ms": 5.928,
+  "measured_speedup_x": 1.91,
+  "operating_points": [
+    {
+      "tau": 0.05,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 98.5,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6298,
+      "eff_latency_ms": 5.97,
+      "speedup_x": 1.89
+    },
+    {
+      "tau": 0.1,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 98.5,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6298,
+      "eff_latency_ms": 5.97,
+      "speedup_x": 1.89
+    },
+    {
+      "tau": 0.2,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 98.5,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6298,
+      "eff_latency_ms": 5.97,
+      "speedup_x": 1.89
+    },
+    {
+      "tau": 0.3,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 98.5,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6298,
+      "eff_latency_ms": 5.97,
+      "speedup_x": 1.89
+    },
+    {
+      "tau": 0.4,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 99.25,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6346,
+      "eff_latency_ms": 5.93,
+      "speedup_x": 1.91
+    },
+    {
+      "tau": 0.5,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 99.25,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6346,
+      "eff_latency_ms": 5.93,
+      "speedup_x": 1.91
+    },
+    {
+      "tau": 0.6,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 99.25,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6346,
+      "eff_latency_ms": 5.93,
+      "speedup_x": 1.91
+    },
+    {
+      "tau": 0.7,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 100.0,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6394,
+      "eff_latency_ms": 5.89,
+      "speedup_x": 1.92
+    },
+    {
+      "tau": 0.8,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 100.0,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6394,
+      "eff_latency_ms": 5.89,
+      "speedup_x": 1.92
+    },
+    {
+      "tau": 0.9,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 100.0,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6394,
+      "eff_latency_ms": 5.89,
+      "speedup_x": 1.92
+    },
+    {
+      "tau": 0.95,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 100.0,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6394,
+      "eff_latency_ms": 5.89,
+      "speedup_x": 1.92
+    },
+    {
+      "tau": 0.59,
+      "fnr_pct": 0.0,
+      "normal_bypass_pct": 99.25,
+      "cp_upper_fnr_pct": 3.92,
+      "bypassed_frac": 0.6346,
+      "eff_latency_ms": 5.93,
+      "speedup_x": 1.91
+    }
+  ]
+}

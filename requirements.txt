@@ -1,0 +1,24 @@
+# Core dependencies for training & evaluation (pinned to verified versions, 2026-10-01)
+# Install: pip install -r requirements.txt
+#
+# Optional tooling dependencies (translation WebUI, laya_router) live in
+# requirements-tools.txt. `medpy` was removed (unused; HD95 uses scipy directly).
+
+torch>=2.0.0
+torchvision>=0.15.0
+
+numpy~=2.2
+scipy~=1.18
+scikit-image~=0.26
+albumentations~=2.0
+pyyaml~=6.0
+matplotlib~=3.11
+tqdm~=4.70
+thop~=0.1.1
+pandas~=2.3
+opencv-python~=4.9
+
+# --- Verified environment reference (Anaconda, Python 3.12, CUDA 11.8) ---
+# torch==2.7.1+cu118  torchvision==0.22.1+cu118  numpy==2.2.6  scipy==1.18.1
+# scikit-image==0.26.0  albumentations==2.0.8  opencv-python==4.9.0.80
+# pandas==2.3.1  PyYAML==6.0.1  matplotlib==3.11.2  tqdm==4.70.1  thop==0.1.1

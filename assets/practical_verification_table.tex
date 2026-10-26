@@ -1,0 +1,20 @@
+\begin{table*}[t]
+\centering
+\caption{Comprehensive Screening Benchmark across Paradigms and Medical Baselines}
+\label{tab:screening_benchmark}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+\textbf{Paradigm / Model} & \textbf{Latency (ms)} & \textbf{FPS} & \textbf{GFLOPs} & \textbf{Savings (\%)} & \textbf{Sensitivity (95\% CI)} & \textbf{Normal Bypass (\%)} & \textbf{Dice} & \textbf{Speedup} \\
+\midrule
+Monolithic (S2) & 7.88 & 126.8 & 11.33 & 0.0\% & 100.0\% [67.6\%, 100.0\%] & 0.0\% & 0.5560 & 1.00$\times$ \\
+Binary Triage & 1.32 & 755.0 & 0.02 & 99.8\% & 0.0\% [0.0\%, 32.4\%] & 100.0\% & 0.0000 & 5.95$\times$ \\
+3-Tier Cascade & 7.56 & 132.2 & 8.14 & 28.1\% & 100.0\% [67.6\%, 100.0\%] & 0.0\% & 0.5560 & 1.04$\times$ \\
+FEENet-EE (Unified) & 8.13 & 123.0 & 11.78 & 0.0\% & 100.0\% [67.6\%, 100.0\%] & 5.0\% & 0.3553 & 0.97$\times$ \\
+U-Net (Baseline) & 3.92 & 255.0 & 13.75 & 0.0\% & 100.0\% [67.6\%, 100.0\%] & 0.0\% & 0.3210 & 2.01$\times$ \\
+Attention U-Net & 4.53 & 220.7 & 14.28 & 0.0\% & 100.0\% [67.6\%, 100.0\%] & 0.0\% & 0.3932 & 1.74$\times$ \\
+UNet++ (Nested SOTA) & 14.98 & 66.7 & 34.62 & 0.0\% & 100.0\% [67.6\%, 100.0\%] & 0.0\% & 0.4024 & 0.53$\times$ \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

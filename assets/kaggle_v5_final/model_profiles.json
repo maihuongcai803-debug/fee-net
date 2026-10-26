@@ -1,0 +1,61 @@
+{
+  "full_path": {
+    "UNet": {
+      "params_m": 7.763,
+      "gflops": 13.75,
+      "flops_source": "thop",
+      "latency_ms": 10.02,
+      "fps": 99.8
+    },
+    "AttentionUNet": {
+      "params_m": 7.852,
+      "gflops": 14.03,
+      "flops_source": "thop",
+      "latency_ms": 11.57,
+      "fps": 86.5
+    },
+    "UNetPlusPlus": {
+      "params_m": 9.16,
+      "gflops": 34.62,
+      "flops_source": "thop",
+      "latency_ms": 16.92,
+      "fps": 59.1
+    },
+    "FEENet": {
+      "params_m": 8.539,
+      "gflops": 12.59,
+      "flops_source": "thop",
+      "latency_ms": 15.66,
+      "fps": 63.9
+    },
+    "FEENetEarlyExit": {
+      "params_m": 8.552,
+      "gflops": 12.59,
+      "flops_source": "thop",
+      "latency_ms": 17.43,
+      "fps": 57.4
+    },
+    "FEENet_noDWT": {
+      "params_m": 8.546,
+      "gflops": 12.87,
+      "flops_source": "thop",
+      "latency_ms": 14.35,
+      "fps": 69.7
+    },
+    "FEENet_noEGM": {
+      "params_m": 8.522,
+      "gflops": 11.83,
+      "flops_source": "thop",
+      "latency_ms": 11.94,
+      "fps": 83.8
+    }
+  },
+  "triage_gate": {
+    "gate_params_m": 0.075,
+    "gate_gflops": 0.94,
+    "gate_flops_source": "thop",
+    "gate_latency_ms": 2.61,
+    "gate_fps": 382.6
+  },
+  "note": "thop MACs at 256x256 batch 1; latency/FPS by non-blocking CUDA events on cuda:0; gate = stem+layer1+DWT+SCA+triage head"
+}

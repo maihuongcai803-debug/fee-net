@@ -1,0 +1,59 @@
+{
+  "device": "NVIDIA GeForce RTX 4060 Laptop GPU",
+  "cuda_version": "11.8",
+  "input_shape": [
+    1,
+    3,
+    256,
+    256
+  ],
+  "iterations": 200,
+  "warmup": 50,
+  "timer": "torch.cuda.Event",
+  "gate": {
+    "mean_ms": 2.3965151941776277,
+    "std_ms": 0.3072397806812588,
+    "median_ms": 2.2840319871902466,
+    "p95_ms": 3.026529514789581,
+    "min_ms": 2.1340160369873047,
+    "max_ms": 3.6218879222869873,
+    "fps": 417.2725474178157
+  },
+  "full_path": {
+    "mean_ms": 9.947316818237304,
+    "std_ms": 1.3696624177139862,
+    "median_ms": 9.505871772766113,
+    "p95_ms": 13.08288016319275,
+    "min_ms": 8.549471855163574,
+    "max_ms": 16.020479202270508,
+    "fps": 100.52962203502061
+  },
+  "standalone_feenet": {
+    "mean_ms": 8.5924484705925,
+    "std_ms": 1.1579964613167106,
+    "median_ms": 8.244223594665527,
+    "p95_ms": 11.337676572799682,
+    "min_ms": 7.443327903747559,
+    "max_ms": 12.484607696533203,
+    "fps": 116.38126238667384
+  },
+  "baseline_unet": {
+    "mean_ms": 3.7477752006053926,
+    "std_ms": 0.6251685034989428,
+    "median_ms": 3.6044799089431763,
+    "p95_ms": 4.921804618835449,
+    "min_ms": 3.097599983215332,
+    "max_ms": 5.43503999710083,
+    "fps": 266.82496854092693
+  },
+  "mixed_cohort_summary": {
+    "tau_star": 0.96,
+    "normal_bypass_rate_pct": 64.66,
+    "overall_bypass_fraction": 0.4135,
+    "gate_latency_ms": 2.397,
+    "full_latency_ms": 9.947,
+    "effective_latency_ms": 6.825,
+    "effective_fps": 146.5,
+    "measured_speedup_x": 1.46
+  }
+}

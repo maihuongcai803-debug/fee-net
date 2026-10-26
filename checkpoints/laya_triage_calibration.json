@@ -1,0 +1,42 @@
+{
+    "model_name": "LayaVisualTriageNet",
+    "parameters": 48162,
+    "parameters_m": 0.0482,
+    "gflops_128x128": 0.0225,
+    "input_resolution": [
+        3,
+        128,
+        128
+    ],
+    "best_epoch": 20,
+    "calibrated_threshold_tau": 0.5414,
+    "safety_constraint": "High-Risk Lesion Sensitivity (Recall) = 100.00%",
+    "performance_at_tau": {
+        "high_risk_sensitivity_pct": 100.0,
+        "overall_sensitivity_pct": 91.67,
+        "specificity_pct": 83.33,
+        "accuracy_pct": 87.5,
+        "false_negative_rate_pct": 8.33,
+        "false_positive_rate_pct": 16.67,
+        "normal_case_bypass_rate_pct": 41.67,
+        "auc": 0.9367,
+        "confusion_matrix": {
+            "tp": 55,
+            "fn": 5,
+            "fp": 10,
+            "tn": 50
+        },
+        "min_high_risk_prob": 0.5464,
+        "min_lesion_prob": 0.3886,
+        "max_normal_prob": 0.8505
+    },
+    "clinical_decision_rule": {
+        "condition": "p_lesion >= tau",
+        "positive_dispatch": "TRIGGER_FEENET_SEGMENTATION (Wake up System 2 for boundary delineation)",
+        "negative_dispatch": "BYPASS_SEGMENTATION (Safe clinical clearance, GPU compute conserved)"
+    },
+    "artifacts": {
+        "checkpoint": "checkpoints\\laya_triage_best.pth",
+        "roc_plot": "assets/laya_triage_roc_curve.png"
+    }
+}

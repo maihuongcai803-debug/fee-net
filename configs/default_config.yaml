@@ -1,0 +1,37 @@
+# ==============================================================================
+# FEE-Net Default Training & Evaluation Configuration
+# ==============================================================================
+# This file now feeds the DEFAULTS of train.py (CLI flags override).
+# Values below mirror the hyperparameters actually used across the historical
+# 5-fold experiments (Exp-012 ~ Exp-026); previously this file was unused and
+# diverged from the hardcoded defaults (fixed 2026-10-01, see Exp-027).
+
+# Dataset Configuration
+dataset:
+  img_size: 256
+  batch_size: 16
+  num_workers: 0        # raise on Linux/Kaggle for faster loading (e.g. 4)
+  train_val_split: 0.8  # NOTE: superseded by stratified 5-fold splits.json (v2)
+  data_dir: "./data"
+
+# Training Hyperparameters
+training:
+  epochs: 50
+  lr: 0.0003
+  weight_decay: 0.0001
+  early_stopping: 10
+  lr_scheduler: "cosine"
+  min_lr: 0.000001
+  amp_enabled: true
+
+# Loss Function Weights (Boundary-aware Compound Loss)
+loss:
+  lambda_bce: 1.0
+  lambda_dice: 1.0
+  lambda_boundary: 0.1  # historical value used by all logged experiments
+
+# Global Reproducibility Seed
+seed: 42
+
+# Hardware Acceleration Device ("cuda" or "cpu"; empty = auto-detect)
+device: ""

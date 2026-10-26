@@ -1,0 +1,7 @@
+# Optional tooling dependencies (not needed for training/evaluation)
+# Install: pip install -r requirements-tools.txt
+#
+# - transformers: only used by tools/laya_router.py
+# - pdf2zh: the bilingual literature translation WebUI (tools/启动_文献双语翻译工具WebUI.bat)
+transformers>=4.30.0
+pdf2zh

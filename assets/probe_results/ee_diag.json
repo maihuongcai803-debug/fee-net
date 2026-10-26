@@ -1,0 +1,68 @@
+{
+  "cfg": {
+    "model": "feenet_ee",
+    "epochs": 5,
+    "lr": 0.0003,
+    "seed": 42,
+    "w_bound": 0.1,
+    "w_deep": 0.3,
+    "use_bound": true,
+    "use_edge": true,
+    "use_deep": true,
+    "use_triage": true,
+    "tag": "ee_diag"
+  },
+  "params_m": 8.552,
+  "best": {
+    "epoch": 5,
+    "loss": 1.0615,
+    "val_dice": 54.44,
+    "val_iou": 42.74,
+    "val_hd95": 67.37
+  },
+  "last": {
+    "epoch": 5,
+    "loss": 1.0615,
+    "val_dice": 54.44,
+    "val_iou": 42.74,
+    "val_hd95": 67.37
+  },
+  "traj": [
+    {
+      "epoch": 1,
+      "loss": 1.6697,
+      "val_dice": 42.36,
+      "val_iou": 29.93,
+      "val_hd95": 101.25
+    },
+    {
+      "epoch": 2,
+      "loss": 1.346,
+      "val_dice": 41.78,
+      "val_iou": 31.03,
+      "val_hd95": 76.54
+    },
+    {
+      "epoch": 3,
+      "loss": 1.232,
+      "val_dice": 45.77,
+      "val_iou": 34.98,
+      "val_hd95": 70.0
+    },
+    {
+      "epoch": 4,
+      "loss": 1.1321,
+      "val_dice": 52.12,
+      "val_iou": 40.59,
+      "val_hd95": 72.72
+    },
+    {
+      "epoch": 5,
+      "loss": 1.0615,
+      "val_dice": 54.44,
+      "val_iou": 42.74,
+      "val_hd95": 67.37
+    }
+  ],
+  "minutes": 1.6
+}

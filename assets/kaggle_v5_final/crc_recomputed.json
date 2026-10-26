@@ -1,0 +1,10 @@
+{
+  "tau_star": 0.99,
+  "n_val_positive": 170,
+  "cp_upper_on_val_pct": 1.75,
+  "n_test_positive": 150,
+  "test_misses": 0,
+  "test_fnr_pct": 0.0,
+  "cp_upper_on_test_pct": 1.98,
+  "guarantee_holds": true
+}
